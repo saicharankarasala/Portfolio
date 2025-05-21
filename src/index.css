@@ -206,7 +206,7 @@
   /* Cards */
   .card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
-           border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
+           border-2 border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
            shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
   }
 
@@ -300,7 +300,7 @@
   /* Projects Section */
   .project-card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
-           border border-[rgb(0,255,238)] relative overflow-hidden
+           border-2 border-[rgb(0,255,238)] relative overflow-hidden
            transition-all duration-300;
   }
 
@@ -537,7 +537,7 @@
 
   .stat-box {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-6
-           border border-[rgb(0,255,238)] text-center
+           border-2 border-[rgb(0,255,238)] text-center
            transition-all duration-300 hover:scale-105
            hover:shadow-[0_0_25px_var(--main-color)];
   }
@@ -878,7 +878,7 @@
 
   .certification-card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
-           border border-[rgb(0,255,238)] relative overflow-hidden
+           border-2 border-[rgb(0,255,238)] relative overflow-hidden
            transition-all duration-300;
   }
 
