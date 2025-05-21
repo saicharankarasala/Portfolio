@@ -250,8 +250,8 @@ This portfolio was designed and developed by:
 
 Connect with me:
 
-*   🔗 **LinkedIn:** [https://www.linkedin.com/in/venkatasai-charan](https://www.linkedin.com/in/venkatasai-charan)
-*   📧 **Email:** [venkatasai.charan@gmail.com](mailto:venkatasai.charan@gmail.com)
+*   🔗 **LinkedIn:** [https://www.linkedin.com/in/sai-charan-k-v](https://www.linkedin.com/in/sai-charan-k-v)
+*   📧 **Email:** [saicharankarasala@gmail.com](mailto:saicharankarasala@gmail.com)
 
 ---
 
