@@ -183,7 +183,7 @@
   }
 
   .timeline-item {
-    @apply mb-10 w-full relative;
+    @apply mb-4 w-full relative;
   }
 
   .timeline-item:last-child {
