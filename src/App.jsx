@@ -279,7 +279,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="experience pt-0 pb-12 px-[12%]" id="experience">
+      <section className="experience pt-0 pb-8 px-[12%]" id="experience">
         <h2 className="heading">My <span>Experience</span></h2>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -376,7 +376,7 @@ const App = () => {
         </VerticalTimeline>
       </section>
 
-      <section className="projects pt-6 pb-12 px-[12%]" id="projects">
+      <section className="projects pt-0 pb-8 px-[12%]" id="projects">
         <h2 className="heading">My <span>Projects</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* 2023 Project */}
