@@ -18,6 +18,7 @@ import HamburgerMenu from './components/HamburgerMenu';
 import Contact from './components/Contact';
 import VscLogo from './components/VscLogo';
 import BackgroundLogo from './components/BackgroundLogo';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -509,6 +510,7 @@ const App = () => {
           © Venkata Sai Charan | All Rights Reserved
         </div>
       </footer>
+      <SpeedInsights />
     </div>
   );
 };
