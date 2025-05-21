@@ -290,8 +290,8 @@ const App = () => {
             iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
             icon={<FaBriefcase />}
           >
-            <h3 className="text-xl font-bold">Network Operations</h3>
-            <h4 className="text-lg text-[--main-color]">Source Consulting LLC – Remote</h4>
+            <h3 className="text-xl font-bold">Software Engineer</h3>
+            <h4 className="text-lg text-[--main-color]">Source Consulting LLC – Remote (<a href="https://touchwindow.com" target="_blank" rel="noopener noreferrer">Client: Touch Screens Inc - touchwindow.com</a>)</h4>
             <ul className="list-disc pl-5 mt-4 text-white/80">
               <li>Enhanced network performance and reliability by monitoring and analyzing metrics using AWS, Python, and SQL.</li>
               <li>Reduced response times by 30% via automated Python scripts for performance analysis and incident reporting.</li>
@@ -310,7 +310,7 @@ const App = () => {
             icon={<FaBriefcase />}
           >
             <h3 className="text-xl font-bold">Network Operation Analyst</h3>
-            <h4 className="text-lg text-[--main-color]">Trbhi INC – Remote (Client: Ziply)</h4>
+            <h4 className="text-lg text-[--main-color]">Trbhi INC – Remote (<a href="https://ziplyfiber.com" target="_blank" rel="noopener noreferrer">Client: Ziply Fiber Technology - ziplyfiber.com</a>)</h4>
             <ul className="list-disc pl-5 mt-4 text-white/80">
               <li>Reduced network downtime by 20% through SQL and Python-based analysis.</li>
               <li>Boosted client satisfaction by 15% with effective incident response coordination.</li>
