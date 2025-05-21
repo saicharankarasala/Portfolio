@@ -579,8 +579,11 @@
 
   .contact-form {
     @apply w-full max-w-3xl mx-auto bg-black/20 backdrop-blur-sm 
-           rounded-2xl p-8 border border-[rgb(0,255,238,0.2)]
-           shadow-[0_0_20px_rgba(0,255,238,0.1)];
+           rounded-2xl p-8 border-2 border-[rgb(0,255,238)]
+           shadow-[0_0_20px_rgba(0,255,238,0.2)]
+           transition-all duration-300
+           hover:shadow-[0_0_30px_rgba(0,255,238,0.3)]
+           hover:border-[rgb(0,255,238,0.8)];
   }
 
   .form-group {
