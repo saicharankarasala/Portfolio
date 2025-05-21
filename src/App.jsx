@@ -206,7 +206,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="certifications pb-6" id="certifications">
+      <section className="certifications pb-0" id="certifications">
         <h2 className="heading">My <span>Certifications</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* AWS Certification */}
