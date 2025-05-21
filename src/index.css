@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #080808;
-  --second-bg-color: #131313;
-  --text-color: white;
-  --main-color: #00ffee;
+  --bg-color: #f4f7f6; /* Light background */
+  --second-bg-color: #e9ecef; /* Slightly darker light background */
+  --text-color: #212529; /* Dark text for readability */
+  --main-color: #00a3b0; /* Muted teal accent color */
 }
 
 @layer base {
