@@ -101,3 +101,69 @@ npm run preview
 ## 📁 Project Structure
 
 ```
+.
+├── public/
+│   ├── images/
+│   └── certifications/
+├── assets/
+│   └── images/
+├── src/
+│   ├── components/
+│   │   ├── BackgroundLogo.jsx
+│   │   ├── Contact.jsx
+│   │   ├── HamburgerMenu.jsx
+│   │   └── VscLogo.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧩 Notable Packages & Libraries
+
+- [`react-icons`](https://react-icons.github.io/react-icons/) – Icon library for React.
+- [`aos`](https://michalsnik.github.io/aos/) – Animate on scroll library.
+- [`framer-motion`](https://www.framer.com/motion/) – Animation library for React.
+- [`emailjs`](https://www.emailjs.com/) – Send emails from the frontend.
+- [`boxicons`](https://boxicons.com/) – Simple vector icons.
+- [`react-scroll`](https://www.npmjs.com/package/react-scroll) – Smooth scrolling for navigation.
+
+---
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+**Venkata Sai Charan**  
+[LinkedIn](https://www.linkedin.com/in/sai-charan-k-v/) | [Email](mailto:saicharankarasala@gmail.com)
+
+---
+
+## 🌟 Show Your Support
+
+If you like this project, please ⭐️ the repo and share it!
+
+---
+
+## 📣 Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [EmailJS](https://www.emailjs.com/)
+- [Boxicons](https://boxicons.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [AOS](https://michalsnik.github.io/aos/)
+
+---
+
+> _"Engineer by skill, problem-solver by mindset. Let's build what matters."_
