@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #f4f7f6; /* Light background */
-  --second-bg-color: #e9ecef; /* Slightly darker light background */
-  --text-color: #212529; /* Dark text for readability */
-  --main-color: #00a3b0; /* Muted teal accent color */
+  --bg-color: #f9f9f9;           /* Light gray background */
+  --second-bg-color: #ffffff;   /* White for cards/sections */
+  --text-color: #1f1f1f;        /* Dark text for readability */
+  --main-color: #3aa6b9;        /* Teal blue accent */
 }
 
 @layer base {
@@ -71,12 +71,12 @@
 @layer components {
   /* Header/Navigation */
   .header {
-    @apply fixed top-0 left-0 w-full px-[12%] py-6 bg-black/30 backdrop-blur-[10px]
+    @apply fixed top-0 left-0 w-full px-[12%] py-6 bg-white/50 backdrop-blur-md
            flex justify-between items-center z-50;
   }
 
   .logo {
-    @apply text-2xl md:text-3xl text-white font-extrabold cursor-pointer transition-transform duration-300;
+    @apply text-2xl md:text-3xl text-[--text-color] font-extrabold cursor-pointer transition-transform duration-300;
   }
 
   .logo:hover {
@@ -84,17 +84,17 @@
   }
 
   .logo span {
-    text-shadow: 0 0 25px var(--main-color);
+    text-shadow: 0 0 10px var(--main-color); /* Adjusted shadow for light background */
     color: var(--main-color);
   }
 
   .navbar a {
-    @apply text-base md:text-lg text-white ml-8 font-medium transition-all duration-300 border-b-[3px] border-transparent;
+    @apply text-base md:text-lg text-[--text-color] ml-8 font-medium transition-all duration-300 border-b-[3px] border-transparent;
   }
 
   .navbar a:hover,
   .navbar a.active {
-    @apply text-[rgb(0,255,238)] border-b-[3px] border-[rgb(0,255,238)];
+    @apply text-[--main-color] border-b-[3px] border-[--main-color];
   }
 
   /* Sections */
@@ -205,13 +205,13 @@
 
   /* Cards */
   .card {
-    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
-           border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
-           shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
+    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-8 
+           border border-[--main-color] relative overflow-hidden cursor-pointer
+           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
   }
 
   .card:hover {
-    @apply transform scale-105 shadow-[0_0_25px_var(--main-color)];
+    @apply transform scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
   }
 
   /* Text Animation */
@@ -299,20 +299,21 @@
 
   /* Projects Section */
   .project-card {
-    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
-           border border-[rgb(0,255,238)] relative overflow-hidden
-           transition-all duration-300;
+    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-8 
+           border border-[--main-color] relative overflow-hidden
+           transition-all duration-300
+           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
   }
 
   .project-card:hover {
-    @apply scale-105 shadow-[0_0_25px_var(--main-color)];
+    @apply scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
   }
 
   .project-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0, 255, 238, 0.1), transparent);
+    background: linear-gradient(to right, rgba(58, 166, 185, 0.1), transparent); /* Adjusted gradient color */
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -874,20 +875,21 @@
   }
 
   .certification-card {
-    @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
-           border border-[rgb(0,255,238)] relative overflow-hidden
-           transition-all duration-300;
+    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-6 
+           border border-[--main-color] relative overflow-hidden
+           transition-all duration-300
+           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
   }
 
   .certification-card:hover {
-    @apply scale-105 shadow-[0_0_25px_var(--main-color)];
+    @apply scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
   }
 
   .certification-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0, 255, 238, 0.1), transparent);
+    background: linear-gradient(to right, rgba(58, 166, 185, 0.1), transparent); /* Adjusted gradient color */
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -1069,31 +1071,28 @@
   @apply fixed top-0 left-0 w-full h-full
          flex items-center justify-center
          pointer-events-none;
-  transform: translateY(15vh);
 }
 
 .background-logo-container-bottom {
   @apply fixed top-0 left-0 w-full h-full
          flex items-center justify-center
          pointer-events-none;
-  transform: translateY(90vh);
 }
 
 .background-logo {
   @apply w-[800px] h-[800px] md:w-[1000px] md:h-[1000px]
          object-contain
-         opacity-[0.02]
-         transition-all duration-700
-         filter brightness-105 contrast-[1.1]
-         grayscale;
+         opacity-[0.05]; /* Increased opacity for light background */
+  transition: opacity 0.7s ease-in-out;
+  filter: grayscale(50%) brightness(1.2) contrast(1.1); /* Adjusted filters */
 }
 
 .background-logo-glow-outer {
   @apply absolute 
          w-[900px] h-[900px] md:w-[1100px] md:h-[1100px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-         bg-[rgb(0,255,238)]
-         opacity-[0.005] blur-[100px]
+         bg-[--main-color]
+         opacity-[0.1] blur-[120px] /* Adjusted opacity */
          animate-pulse-slow
          rounded-full
          pointer-events-none;
@@ -1103,8 +1102,8 @@
   @apply absolute
          w-[800px] h-[800px] md:w-[1000px] md:h-[1000px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-         bg-[rgb(0,255,238)]
-         opacity-[0.008] blur-[80px]
+         bg-[--main-color]
+         opacity-[0.15] blur-[80px] /* Adjusted opacity */
          animate-pulse
          rounded-full
          pointer-events-none;
@@ -1115,18 +1114,18 @@
          w-[850px] h-[850px] md:w-[1050px] md:h-[1050px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
          pointer-events-none
-         opacity-[0.006];
+         opacity-[0.03]; /* Adjusted opacity */
   background: 
-    radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.7) 100%),
+    radial-gradient(circle at center, transparent 0%, rgba(249, 249, 249, 0.8) 100%), /* Adjusted gradient for light background */
     conic-gradient(
       from 0deg at 50% 50%,
-      rgba(0, 255, 238, 0.02) 0deg,
+      rgba(58, 166, 185, 0.05) 0deg, /* Adjusted color and opacity */
       transparent 60deg,
-      rgba(0, 255, 238, 0.02) 120deg,
+      rgba(58, 166, 185, 0.05) 120deg, /* Adjusted color and opacity */
       transparent 180deg,
-      rgba(0, 255, 238, 0.02) 240deg,
+      rgba(58, 166, 185, 0.05) 240deg, /* Adjusted color and opacity */
       transparent 300deg,
-      rgba(0, 255, 238, 0.02) 360deg
+      rgba(58, 166, 185, 0.05) 360deg /* Adjusted color and opacity */
     );
   animation: rotate 60s linear infinite;
 }
@@ -1154,23 +1153,23 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .background-logo {
-    @apply w-[600px] h-[600px] opacity-[0.12];
+    @apply w-[600px] h-[600px] opacity-[0.15]; /* Adjusted opacity */
   }
   
   .background-logo-glow-outer {
-    @apply opacity-[0.05];
+    @apply opacity-[0.1]; /* Adjusted opacity */
   }
   
   .background-logo-glow-inner {
-    @apply opacity-[0.07];
+    @apply opacity-[0.12]; /* Adjusted opacity */
   }
 
   .background-logo-container {
-    transform: translateY(10vh);
+    /* transform: translateY(10vh); */ /* Removed transform */
   }
 
   .background-logo-container-bottom {
-    transform: translateY(80vh);
+    /* transform: translateY(80vh); */ /* Removed transform */
   }
 }
 
