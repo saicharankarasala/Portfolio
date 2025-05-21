@@ -38,40 +38,40 @@ const HamburgerMenu = () => {
   return (
     <>
       <button
-        className="hamburger-menu md:hidden"
+        className="hamburger-menu md:hidden text-primary-light dark:text-primary-dark hover:text-link-light dark:hover:text-link-dark"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
         <div className={`hamburger-icon ${isOpen ? 'open' : ''}`}>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="bg-primary-light dark:bg-primary-dark"></span>
+          <span className="bg-primary-light dark:bg-primary-dark"></span>
+          <span className="bg-primary-light dark:bg-primary-dark"></span>
         </div>
       </button>
 
-      <div className={`dropdown-menu ${isOpen ? 'open' : 'closed'}`}>
-        <a href="#home" onClick={() => setIsOpen(false)}>
+      <div className={`dropdown-menu ${isOpen ? 'open' : 'closed'} bg-background-light/95 dark:bg-background-dark/95 border border-primary-light/20 dark:border-primary-dark/20`}>
+        <a href="#home" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaHome className="text-2xl" />
           Home
         </a>
-        <a href="#about" onClick={() => setIsOpen(false)}>
+        <a href="#about" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaUser className="text-2xl" />
           About
         </a>
-        <a href="#education" onClick={() => setIsOpen(false)}>
+        <a href="#education" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaGraduationCap className="text-2xl" />
           Education
         </a>
-        <a href="#experience" onClick={() => setIsOpen(false)}>
+        <a href="#experience" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaBriefcase className="text-2xl" />
           Experience
         </a>
-        <a href="#projects" onClick={() => setIsOpen(false)}>
+        <a href="#projects" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaCode className="text-2xl" />
           Projects
         </a>
-        <a href="#contact" onClick={() => setIsOpen(false)}>
+        <a href="#contact" onClick={() => setIsOpen(false)} className="text-text-primary-light dark:text-text-primary-dark hover:text-primary-light dark:hover:text-primary-dark">
           <FaEnvelope className="text-2xl" />
           Contact
         </a>

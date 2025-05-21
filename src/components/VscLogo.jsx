@@ -24,9 +24,9 @@ const VscLogo = () => {
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`
         }}
       >
-        <div className="logo-glow-outer"></div>
-        <div className="logo-glow-inner"></div>
-        <div className="logo-rays"></div>
+        <div className="logo-glow-outer bg-primary-light/20 dark:bg-primary-dark/20"></div>
+        <div className="logo-glow-inner bg-primary-light/40 dark:bg-primary-dark/40"></div>
+        <div className="logo-rays bg-primary-light/10 dark:bg-primary-dark/10"></div>
         <img 
           src="/images/vsc-logo.png" 
           alt="VSC Logo" 

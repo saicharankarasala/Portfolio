@@ -89,7 +89,7 @@ const Contact = () => {
             height={windowSize.height}
             numberOfPieces={300}
             recycle={true}
-            colors={['#00FFEE', '#00E6D6', '#00CCBE', '#00B3A6', '#00998E']}
+            colors={['#0077FF', '#1E90FF', '#00C2FF', '#10B981', '#34D399']}
             gravity={0.15}
             tweenDuration={8000}
             wind={0.01}
@@ -98,9 +98,9 @@ const Contact = () => {
         </div>
       )}
       <section className="contact" id="contact">
-        <h2 className="heading">Contact <span>Me</span></h2>
+        <h2 className="heading">Contact <span className="text-primary-light dark:text-primary-dark">Me</span></h2>
         
-        <form ref={form} onSubmit={sendEmail} className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact-form bg-background-light/10 dark:bg-background-dark/10 border border-primary-light/20 dark:border-primary-dark/20">
           <div className="form-group">
             <div className="input-field">
               <input 
@@ -114,6 +114,7 @@ const Contact = () => {
                 name="from_name" 
                 placeholder="Full Name" 
                 required 
+                className="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark border border-primary-light/20 dark:border-primary-dark/20 focus:border-primary-light dark:focus:border-primary-dark"
               />
             </div>
             <div className="input-field">
@@ -122,6 +123,7 @@ const Contact = () => {
                 name="reply_to" 
                 placeholder="Email Address" 
                 required 
+                className="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark border border-primary-light/20 dark:border-primary-dark/20 focus:border-primary-light dark:focus:border-primary-dark"
               />
             </div>
           </div>
@@ -131,6 +133,7 @@ const Contact = () => {
               name="subject" 
               placeholder="Subject" 
               required 
+              className="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark border border-primary-light/20 dark:border-primary-dark/20 focus:border-primary-light dark:focus:border-primary-dark"
             />
           </div>
           <div className="input-field">
@@ -138,18 +141,19 @@ const Contact = () => {
               name="message" 
               placeholder="Your Message" 
               required
+              className="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark border border-primary-light/20 dark:border-primary-dark/20 focus:border-primary-light dark:focus:border-primary-dark"
             ></textarea>
           </div>
           
           {submitStatus.message && (
-            <div className={`submit-status ${submitStatus.isError ? 'error' : 'success'}`}>
+            <div className={`submit-status ${submitStatus.isError ? 'text-red-500' : 'text-link-light dark:text-link-dark'}`}>
               {submitStatus.message}
             </div>
           )}
           
           <button 
             type="submit" 
-            className="submit-btn"
+            className="submit-btn bg-primary-light dark:bg-primary-dark hover:bg-link-light dark:hover:bg-link-dark text-text-primary-light dark:text-text-primary-dark"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
