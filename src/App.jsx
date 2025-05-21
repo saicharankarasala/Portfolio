@@ -123,21 +123,21 @@ const App = () => {
       <section className="home" id="home">
         <div className="home-content">
           <h1>Hi, It's <span className="text-primary-light dark:text-primary-dark">Venkata Sai Charan</span></h1>
-          <h3 className="text-animation">I'm a <span className="text-primary-light dark:text-primary-dark"></span></h3>
+          <h3 className="text-animation font-semibold text-xl">I'm a <span className="text-primary-light dark:text-primary-dark"></span></h3>
           <p className="text-text-secondary-light dark:text-text-secondary-dark">Software Engineer & Problem Solver. Engineer by skill, problem-solver by mindset. Let's build what matters.</p>
 
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/sai-charan-k-v/" target="_blank" rel="noopener noreferrer" className="text-primary-light dark:text-primary-dark hover:text-link-light dark:hover:text-link-dark">
+            <a href="https://www.linkedin.com/in/sai-charan-k-v/" target="_blank" rel="noopener noreferrer" className="text-primary-light dark:text-primary-dark hover:text-accent-light dark:hover:text-accent-dark hover:scale-110 transition duration-200">
               <i className='bx bxl-linkedin'></i>
             </a>
-            <a href="mailto:saicharankarasala@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary-light dark:text-primary-dark hover:text-link-light dark:hover:text-link-dark">
+            <a href="mailto:saicharankarasala@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary-light dark:text-primary-dark hover:text-accent-light dark:hover:text-accent-dark hover:scale-110 transition duration-200">
               <i className='bx bx-envelope'></i>
             </a>
           </div>
 
           <div className="btn-group">
-            <a href="#" className="btn bg-primary-light dark:bg-primary-dark hover:bg-link-light dark:hover:bg-link-dark text-text-primary-light dark:text-text-primary-dark">Download CV</a>
-            <a href="#contact" className="btn bg-primary-light dark:bg-primary-dark hover:bg-link-light dark:hover:bg-link-dark text-text-primary-light dark:text-text-primary-dark">Contact Me</a>
+            <a href="#" className="btn bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-dark text-text-primary-light dark:text-text-primary-dark hover:shadow-xl transition duration-300 ease-in-out">Download CV</a>
+            <a href="#contact" className="btn bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-dark text-text-primary-light dark:text-text-primary-dark hover:shadow-xl transition duration-300 ease-in-out">Contact Me</a>
           </div>
         </div>
 
@@ -145,7 +145,7 @@ const App = () => {
           <img 
             src="/images/profile.JPG" 
             alt="Venkata Sai Charan - UI/UX Designer & Software Engineer" 
-            className="profile-image"
+            className="profile-image ring-4 ring-accent-light dark:ring-accent-dark"
           />
         </div>
       </section>
