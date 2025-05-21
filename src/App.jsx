@@ -279,7 +279,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="experience" id="experience">
+      <section className="experience pt-0 pb-12 px-[12%]" id="experience">
         <h2 className="heading">My <span>Experience</span></h2>
         <VerticalTimeline>
           <VerticalTimelineElement
