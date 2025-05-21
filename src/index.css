@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #f9f9f9;           /* Light gray background */
-  --second-bg-color: #ffffff;   /* White for cards/sections */
-  --text-color: #1f1f1f;        /* Dark text for readability */
-  --main-color: #3aa6b9;        /* Teal blue accent */
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --text-color: white;
+  --main-color: #00ffee;
 }
 
 @layer base {
@@ -71,12 +71,12 @@
 @layer components {
   /* Header/Navigation */
   .header {
-    @apply fixed top-0 left-0 w-full px-[12%] py-6 bg-white/50 backdrop-blur-md
+    @apply fixed top-0 left-0 w-full px-[12%] py-6 bg-black/30 backdrop-blur-[10px]
            flex justify-between items-center z-50;
   }
 
   .logo {
-    @apply text-2xl md:text-3xl text-[--text-color] font-extrabold cursor-pointer transition-transform duration-300;
+    @apply text-2xl md:text-3xl text-white font-extrabold cursor-pointer transition-transform duration-300;
   }
 
   .logo:hover {
@@ -84,17 +84,17 @@
   }
 
   .logo span {
-    text-shadow: 0 0 10px var(--main-color); /* Adjusted shadow for light background */
+    text-shadow: 0 0 25px var(--main-color);
     color: var(--main-color);
   }
 
   .navbar a {
-    @apply text-base md:text-lg text-[--text-color] ml-8 font-medium transition-all duration-300 border-b-[3px] border-transparent;
+    @apply text-base md:text-lg text-white ml-8 font-medium transition-all duration-300 border-b-[3px] border-transparent;
   }
 
   .navbar a:hover,
   .navbar a.active {
-    @apply text-[--main-color] border-b-[3px] border-[--main-color];
+    @apply text-[rgb(0,255,238)] border-b-[3px] border-[rgb(0,255,238)];
   }
 
   /* Sections */
@@ -183,7 +183,7 @@
   }
 
   .timeline-item {
-    @apply mb-4 w-full relative;
+    @apply mb-10 w-full relative;
   }
 
   .timeline-item:last-child {
@@ -205,13 +205,13 @@
 
   /* Cards */
   .card {
-    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-8 
-           border border-[--main-color] relative overflow-hidden cursor-pointer
-           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
+           border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
+           shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
   }
 
   .card:hover {
-    @apply transform scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
+    @apply transform scale-105 shadow-[0_0_25px_var(--main-color)];
   }
 
   /* Text Animation */
@@ -299,21 +299,20 @@
 
   /* Projects Section */
   .project-card {
-    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-8 
-           border border-[--main-color] relative overflow-hidden
-           transition-all duration-300
-           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
+           border border-[rgb(0,255,238)] relative overflow-hidden
+           transition-all duration-300;
   }
 
   .project-card:hover {
-    @apply scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
+    @apply scale-105 shadow-[0_0_25px_var(--main-color)];
   }
 
   .project-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(58, 166, 185, 0.1), transparent); /* Adjusted gradient color */
+    background: linear-gradient(to right, rgba(0, 255, 238, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -841,7 +840,7 @@
   /* Timeline Mobile Styles */
   @media (max-width: 768px) {
     .vertical-timeline-element {
-      @apply mb-4;
+      @apply mb-8;
     }
 
     .vertical-timeline-element-content {
@@ -875,21 +874,20 @@
   }
 
   .certification-card {
-    @apply bg-[--second-bg-color] backdrop-blur-sm rounded-xl p-6 
-           border border-[--main-color] relative overflow-hidden
-           transition-all duration-300
-           shadow-[0_0_5px_rgba(0,0,0,0.1)]; /* Adjusted shadow for light background */
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
+           border border-[rgb(0,255,238)] relative overflow-hidden
+           transition-all duration-300;
   }
 
   .certification-card:hover {
-    @apply scale-105 shadow-[0_0_15px_rgba(0,0,0,0.2)]; /* Adjusted shadow for light background */
+    @apply scale-105 shadow-[0_0_25px_var(--main-color)];
   }
 
   .certification-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(58, 166, 185, 0.1), transparent); /* Adjusted gradient color */
+    background: linear-gradient(to right, rgba(0, 255, 238, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -1071,28 +1069,31 @@
   @apply fixed top-0 left-0 w-full h-full
          flex items-center justify-center
          pointer-events-none;
+  transform: translateY(15vh);
 }
 
 .background-logo-container-bottom {
   @apply fixed top-0 left-0 w-full h-full
          flex items-center justify-center
          pointer-events-none;
+  transform: translateY(90vh);
 }
 
 .background-logo {
   @apply w-[800px] h-[800px] md:w-[1000px] md:h-[1000px]
          object-contain
-         opacity-[0.05]; /* Increased opacity for light background */
-  transition: opacity 0.7s ease-in-out;
-  filter: grayscale(50%) brightness(1.2) contrast(1.1); /* Adjusted filters */
+         opacity-[0.02]
+         transition-all duration-700
+         filter brightness-105 contrast-[1.1]
+         grayscale;
 }
 
 .background-logo-glow-outer {
   @apply absolute 
          w-[900px] h-[900px] md:w-[1100px] md:h-[1100px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-         bg-[--main-color]
-         opacity-[0.1] blur-[120px] /* Adjusted opacity */
+         bg-[rgb(0,255,238)]
+         opacity-[0.005] blur-[100px]
          animate-pulse-slow
          rounded-full
          pointer-events-none;
@@ -1102,8 +1103,8 @@
   @apply absolute
          w-[800px] h-[800px] md:w-[1000px] md:h-[1000px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-         bg-[--main-color]
-         opacity-[0.15] blur-[80px] /* Adjusted opacity */
+         bg-[rgb(0,255,238)]
+         opacity-[0.008] blur-[80px]
          animate-pulse
          rounded-full
          pointer-events-none;
@@ -1114,18 +1115,18 @@
          w-[850px] h-[850px] md:w-[1050px] md:h-[1050px]
          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
          pointer-events-none
-         opacity-[0.03]; /* Adjusted opacity */
+         opacity-[0.006];
   background: 
-    radial-gradient(circle at center, transparent 0%, rgba(249, 249, 249, 0.8) 100%), /* Adjusted gradient for light background */
+    radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.7) 100%),
     conic-gradient(
       from 0deg at 50% 50%,
-      rgba(58, 166, 185, 0.05) 0deg, /* Adjusted color and opacity */
+      rgba(0, 255, 238, 0.02) 0deg,
       transparent 60deg,
-      rgba(58, 166, 185, 0.05) 120deg, /* Adjusted color and opacity */
+      rgba(0, 255, 238, 0.02) 120deg,
       transparent 180deg,
-      rgba(58, 166, 185, 0.05) 240deg, /* Adjusted color and opacity */
+      rgba(0, 255, 238, 0.02) 240deg,
       transparent 300deg,
-      rgba(58, 166, 185, 0.05) 360deg /* Adjusted color and opacity */
+      rgba(0, 255, 238, 0.02) 360deg
     );
   animation: rotate 60s linear infinite;
 }
@@ -1153,23 +1154,23 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .background-logo {
-    @apply w-[600px] h-[600px] opacity-[0.15]; /* Adjusted opacity */
+    @apply w-[600px] h-[600px] opacity-[0.12];
   }
   
   .background-logo-glow-outer {
-    @apply opacity-[0.1]; /* Adjusted opacity */
+    @apply opacity-[0.05];
   }
   
   .background-logo-glow-inner {
-    @apply opacity-[0.12]; /* Adjusted opacity */
+    @apply opacity-[0.07];
   }
 
   .background-logo-container {
-    /* transform: translateY(10vh); */ /* Removed transform */
+    transform: translateY(10vh);
   }
 
   .background-logo-container-bottom {
-    /* transform: translateY(80vh); */ /* Removed transform */
+    transform: translateY(80vh);
   }
 }
 
