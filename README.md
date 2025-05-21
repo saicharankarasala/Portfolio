@@ -1,8 +1,10 @@
 # 🚀 My Personal Portfolio
 
+**🌐 [View the Live Portfolio Here](https://venkatasaicharan.com) 🌐**
+
 Welcome to my personal portfolio! This project showcases my skills, experience, and projects as a software engineer and problem solver. Built with **React**, **Vite**, and **Tailwind CSS**, it's designed to be fast, modern, and fully responsive.
 
-![Portfolio Screenshot](public/images/profile.JPG)
+![Portfolio Screenshot](assets/images/Thumbnail.jpg)
 
 ---
 
@@ -19,6 +21,13 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 - **Dark Mode**: Sleek dark theme for comfortable viewing.
 - **Animations**: Smooth transitions and animated elements.
 - **Deployed on Vercel**: Fast, global hosting.
+
+---
+
+## 🚦 Live Demo
+
+> **Check out the live version:**  
+> 🌐 [venkatasaicharan.com](https://venkatasaicharan.com)
 
 ---
 
@@ -53,8 +62,8 @@ npm install
 ```bash
 npm run dev
 ```
-
-Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+Open your browser and navigate to the URL shown in your terminal (usually `http://localhost:5173` or another port).  
+_Note: The localhost link is only for your own development; viewers should use the live demo link above._
 
 ---
 
@@ -76,75 +85,19 @@ npm run preview
 
 ---
 
-## 📝 Customization
+## 📝 Customization & Code Overview
 
-- **Profile Image**: Replace `public/images/profile.JPG` with your own.
-- **Social Links**: Update URLs in the `App.jsx` and other components.
-- **Projects & Experience**: Edit the content in `src/App.jsx` to reflect your real work.
-- **Contact Form**: Configure your [EmailJS](https://www.emailjs.com/) credentials in `src/components/Contact.jsx`.
+- **Profile Image**: Replace `assets/images/Thumbnail.jpg` and `public/images/profile.JPG` with your own image.
+- **Social Links**: Update URLs in `src/App.jsx` and other components to your own profiles.
+- **Projects & Experience**: Edit the content in `src/App.jsx` to showcase your real work, skills, and achievements.
+- **Contact Form**: Configure your [EmailJS](https://www.emailjs.com/) credentials in `src/components/Contact.jsx` to enable the contact form.
+- **Styling**: All styles are managed with Tailwind CSS. You can easily customize colors, fonts, and layouts in `tailwind.config.js` and your CSS files.
+- **Components**: The code is modular and organized in the `src/components/` directory for easy maintenance and scalability.
+- **Animations**: Animations are handled with AOS and Framer Motion for smooth, modern effects.
+- **Deployment**: The project is optimized for deployment on Vercel, but you can use any static hosting provider.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-.
-├── public/
-│   ├── images/
-│   └── certifications/
-├── src/
-│   ├── components/
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── tailwind.config.js
-├── vite.config.js
-├── package.json
-└── README.md
-```
-
----
-
-## 🧩 Notable Packages
-
-- `react-icons` – Icon library for React.
-- `aos` – Animate on scroll library.
-- `framer-motion` – Animation library for React.
-- `emailjs` – Send emails from the frontend.
-- `boxicons` – Simple vector icons.
-- `react-scroll` – Smooth scrolling for navigation.
-
----
-
-## 🛡️ License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🙋‍♂️ Author
-
-**Venkata Sai Charan**  
-[LinkedIn](https://www.linkedin.com/in/sai-charan-k-v/) | [Email](mailto:saicharankarasala@gmail.com)
-
----
-
-## 🌟 Show Your Support
-
-If you like this project, please ⭐️ the repo and share it!
-
----
-
-## 📣 Acknowledgements
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [EmailJS](https://www.emailjs.com/)
-- [Boxicons](https://boxicons.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [AOS](https://michalsnik.github.io/aos/)
-
----
-
-> _"Engineer by skill, problem-solver by mindset. Let's build what matters."_ 
