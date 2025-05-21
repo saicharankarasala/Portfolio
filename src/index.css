@@ -840,7 +840,7 @@
   /* Timeline Mobile Styles */
   @media (max-width: 768px) {
     .vertical-timeline-element {
-      @apply mb-8;
+      @apply mb-4;
     }
 
     .vertical-timeline-element-content {
