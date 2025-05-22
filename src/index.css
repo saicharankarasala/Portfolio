@@ -781,7 +781,6 @@
   .certification-card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
            border border-[rgb(0,255,238)] relative overflow-hidden
-           shadow-[0_0_10px_var(--main-color)]
            transition-all duration-300;
   }
 
@@ -799,7 +798,7 @@
   }
 
   .certification-card:hover::before {
-    /* opacity: 1; */
+    opacity: 1;
   }
 
   .certification-card .card-content {
