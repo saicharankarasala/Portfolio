@@ -99,7 +99,7 @@
 
   /* Sections */
   section {
-    @apply min-h-screen py-12 px-[12%];
+    @apply px-[12%];
   }
 
   /* Hero Section */

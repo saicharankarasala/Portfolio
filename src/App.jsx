@@ -179,34 +179,34 @@ const App = () => {
         </div>
       </section>
 
-      <section className="education" id="education">
-        <h2 className="heading">My <span>Education</span></h2>
+      <section className="education pb-6 px-[12%]" id="education">
+        <h2 className="heading mb-6">My <span>Education</span></h2>
 
-        <div className="timeline-items">
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-date">August 2022 – December 2023</div>
-            <div className="timeline-content">
-              <h3>University of Missouri - Kansas City</h3>
-              <h4>Master of Science in Computer Science</h4>
-              <p className="gpa">GPA: 3.75</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* UMKC Education */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">University of Missouri - Kansas City</h3>
+              <p className="text-[--main-color] mb-4">August 2022 – December 2023</p>
+              <h4 className="text-lg text-white/90 mb-2">Master of Science in Computer Science</h4>
+              <p className="text-white/80">GPA: 3.75</p>
             </div>
           </div>
 
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-date">August 2017 – August 2021</div>
-            <div className="timeline-content">
-              <h3>St. Joseph's College of Engineering</h3>
-              <h4>Bachelor of Engineering in Electronics and Communication Engineering</h4>
-              <p className="location">Chennai, India</p>
-              <p className="gpa">GPA: 3.7</p>
+          {/* St. Joseph's Education */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">St. Joseph's College of Engineering</h3>
+              <p className="text-[--main-color] mb-4">August 2017 – August 2021</p>
+              <h4 className="text-lg text-white/90 mb-2">Bachelor of Engineering in Electronics and Communication Engineering</h4>
+              <p className="text-white/80">Chennai, India</p>
+              <p className="text-white/80">GPA: 3.7</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="certifications" id="certifications">
+      <section className="certifications pt-6 pb-12 px-[12%]" id="certifications">
         <h2 className="heading">My <span>Certifications</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* AWS Certification */}
@@ -281,99 +281,84 @@ const App = () => {
 
       <section className="experience pt-0 pb-8 px-[12%]" id="experience">
         <h2 className="heading">My <span>Experience</span></h2>
-        <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgba(0, 0, 0, 0.2)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.2)' }}
-            date="January 2025 – Present"
-            iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
-            icon={<FaBriefcase />}
-          >
-            <h3 className="text-xl font-bold">Software Engineer</h3>
-            <h4 className="text-lg text-[--main-color]">Source Consulting LLC – Remote (<a href="https://touchwindow.com" target="_blank" rel="noopener noreferrer">Client: Touch Screens Inc - touchwindow.com</a>)</h4>
-            <ul className="list-disc pl-5 mt-4 text-white/80">
-              <li>Enhanced network performance and reliability by monitoring and analyzing metrics using AWS, Python, and SQL.</li>
-              <li>Reduced response times by 30% via automated Python scripts for performance analysis and incident reporting.</li>
-              <li>Leveraged Tableau and SQL to visualize network trends and areas for improvement.</li>
-              <li>Implemented network upgrades and collaborated across teams using Linux, Bash scripting, and cloud tools.</li>
-              <li>Improved communication and technical issue resolution among engineering and support teams.</li>
-            </ul>
-          </VerticalTimelineElement>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Source Consulting Experience */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Software Engineer</h3>
+              <p className="text-[--main-color] mb-2">January 2025 – Present</p>
+              <h4 className="text-lg text-[--main-color]">Source Consulting LLC – Remote (<a href="https://touchwindow.com" target="_blank" rel="noopener noreferrer">Client: Touch Screens Inc - touchwindow.com</a>)</h4>
+              <ul className="list-disc pl-5 mt-4 text-white/80">
+                <li>Enhanced network performance and reliability by monitoring and analyzing metrics using AWS, Python, and SQL.</li>
+                <li>Reduced response times by 30% via automated Python scripts for performance analysis and incident reporting.</li>
+                <li>Leveraged Tableau and SQL to visualize network trends and areas for improvement.</li>
+                <li>Implemented network upgrades and collaborated across teams using Linux, Bash scripting, and cloud tools.</li>
+                <li>Improved communication and technical issue resolution among engineering and support teams.</li>
+              </ul>
+            </div>
+          </div>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgba(0, 0, 0, 0.2)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.2)' }}
-            date="April 2024 – December 2024"
-            iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
-            icon={<FaBriefcase />}
-          >
-            <h3 className="text-xl font-bold">Network Operation Analyst</h3>
-            <h4 className="text-lg text-[--main-color]">Trbhi INC – Remote (<a href="https://ziplyfiber.com" target="_blank" rel="noopener noreferrer">Client: Ziply Fiber Technology - ziplyfiber.com</a>)</h4>
-            <ul className="list-disc pl-5 mt-4 text-white/80">
-              <li>Reduced network downtime by 20% through SQL and Python-based analysis.</li>
-              <li>Boosted client satisfaction by 15% with effective incident response coordination.</li>
-              <li>Built Tableau and Google Analytics reports for data-driven decision-making.</li>
-              <li>Used Snowflake for trend identification and optimization in mobile/web services.</li>
-            </ul>
-          </VerticalTimelineElement>
+          {/* Trbhi INC Experience */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Network Operation Analyst</h3>
+              <p className="text-[--main-color] mb-2">April 2024 – December 2024</p>
+              <h4 className="text-lg text-[--main-color]">Trbhi INC – Remote (<a href="https://ziplyfiber.com" target="_blank" rel="noopener noreferrer">Client: Ziply Fiber Technology - ziplyfiber.com</a>)</h4>
+              <ul className="list-disc pl-5 mt-4 text-white/80">
+                <li>Reduced network downtime by 20% through SQL and Python-based analysis.</li>
+                <li>Boosted client satisfaction by 15% with effective incident response coordination.</li>
+                <li>Built Tableau and Google Analytics reports for data-driven decision-making.</li>
+                <li>Used Snowflake for trend identification and optimization in mobile/web services.</li>
+              </ul>
+            </div>
+          </div>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgba(0, 0, 0, 0.2)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.2)' }}
-            date="May 2023 – December 2023"
-            iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
-            icon={<FaBriefcase />}
-          >
-            <h3 className="text-xl font-bold">Graduate Student Technical Assistant</h3>
-            <h4 className="text-lg text-[--main-color]">University of Missouri - Kansas City – Kansas City, MO, USA</h4>
-            <ul className="list-disc pl-5 mt-4 text-white/80">
-              <li>Improved lab functionality by 30% through technical support and systems improvements.</li>
-              <li>Boosted lab resource availability by 25% with effective equipment and software management.</li>
-              <li>Raised student support satisfaction by 40% via one-on-one support and feedback tracking.</li>
-              <li>Increased lab efficiency by 35% with detailed troubleshooting and maintenance.</li>
-            </ul>
-          </VerticalTimelineElement>
+          {/* UMKC TA Experience */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Graduate Student Technical Assistant</h3>
+              <p className="text-[--main-color] mb-2">May 2023 – December 2023</p>
+              <h4 className="text-lg text-[--main-color]">University of Missouri - Kansas City – Kansas City, MO, USA</h4>
+              <ul className="list-disc pl-5 mt-4 text-white/80">
+                <li>Improved lab functionality by 30% through technical support and systems improvements.</li>
+                <li>Boosted lab resource availability by 25% with effective equipment and software management.</li>
+                <li>Raised student support satisfaction by 40% via one-on-one support and feedback tracking.</li>
+                <li>Increased lab efficiency by 35% with detailed troubleshooting and maintenance.</li>
+              </ul>
+            </div>
+          </div>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgba(0, 0, 0, 0.2)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.2)' }}
-            date="September 2021 – July 2022"
-            iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
-            icon={<FaBriefcase />}
-          >
-            <h3 className="text-xl font-bold">Software Engineer</h3>
-            <h4 className="text-lg text-[--main-color]">Wipro Technologies – Bengaluru, KA, India</h4>
-            <ul className="list-disc pl-5 mt-4 text-white/80">
-              <li>Enhanced data integration by 30% with Informatica PowerCenter configuration.</li>
-              <li>Automated workflows to reduce processing time by 25%.</li>
-              <li>Managed metadata and repositories to streamline project execution.</li>
-              <li>Supported cross-functional teams with technical insights using SQL and Python.</li>
-            </ul>
-          </VerticalTimelineElement>
+          {/* Wipro Experience */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Software Engineer</h3>
+              <p className="text-[--main-color] mb-2">September 2021 – July 2022</p>
+              <h4 className="text-lg text-[--main-color]">Wipro Technologies – Bengaluru, KA, India</h4>
+              <ul className="list-disc pl-5 mt-4 text-white/80">
+                <li>Enhanced data integration by 30% with Informatica PowerCenter configuration.</li>
+                <li>Automated workflows to reduce processing time by 25%.</li>
+                <li>Managed metadata and repositories to streamline project execution.</li>
+                <li>Supported cross-functional teams with technical insights using SQL and Python.</li>
+              </ul>
+            </div>
+          </div>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgba(0, 0, 0, 0.2)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.2)' }}
-            date="May 2019 – August 2021"
-            iconStyle={{ background: 'var(--main-color)', color: '#fff' }}
-            icon={<FaBriefcase />}
-          >
-            <h3 className="text-xl font-bold">Software Engineer</h3>
-            <h4 className="text-lg text-[--main-color]">Merizon Technologies LLC – Remote</h4>
-            <ul className="list-disc pl-5 mt-4 text-white/80">
-              <li>Developed and maintained web apps with C#/.NET, Java, and MySQL, boosting performance by 20%.</li>
-              <li>Automated data processing tasks to cut manual effort by 30%.</li>
-              <li>Improved API performance by 25% through SQL query optimization.</li>
-              <li>Collaborated in Agile teams using Git, code reviews, and debugging.</li>
-              <li>Balanced project work with academic responsibilities, enhancing collaboration and problem-solving skills.</li>
-            </ul>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+          {/* Merizon Technologies Experience */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Software Engineer</h3>
+              <p className="text-[--main-color] mb-2">May 2019 – August 2021</p>
+              <h4 className="text-lg text-[--main-color]">Merizon Technologies LLC – Remote</h4>
+              <ul className="list-disc pl-5 mt-4 text-white/80">
+                <li>Developed and maintained web apps with C#/.NET, Java, and MySQL, boosting performance by 20%.</li>
+                <li>Automated data processing tasks to cut manual effort by 30%.</li>
+                <li>Improved API performance by 25% through SQL query optimization.</li>
+                <li>Collaborated in Agile teams using Git, code reviews, and debugging.</li>
+                <li>Balanced project work with academic responsibilities, enhancing collaboration and problem-solving skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="projects pt-0 pb-8 px-[12%]" id="projects">
