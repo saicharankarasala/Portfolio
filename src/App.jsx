@@ -429,6 +429,34 @@ const App = () => {
       <section className="projects pt-0 pb-8 px-[12%]" id="projects">
         <h2 className="heading">My <span>Projects</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Portfolio Project */}
+          <div className="project-card group">
+            <div className="card-content">
+              <h3 className="text-xl font-bold mb-2">Personal Portfolio Website</h3>
+              <p className="text-[--main-color] mb-4">2024</p>
+              <ul className="list-disc pl-5 text-white/80 space-y-2">
+                <li>Developed and deployed a fully responsive personal portfolio using React, Vite, and Tailwind CSS, hosted on Vercel.</li>
+                <li>Showcases professional experience, academic projects, and certifications with smooth animated transitions, dark mode, and EmailJS-powered contact form.</li>
+                <li>Integrated Framer Motion for UI animations and implemented modern design principles for an optimized user experience.</li>
+              </ul>
+              <div className="tech-stack mt-4 flex flex-wrap gap-2">
+                <span className="tech-tag">React</span>
+                <span className="tech-tag">Vite</span>
+                <span className="tech-tag">Tailwind CSS</span>
+                <span className="tech-tag">Framer Motion</span>
+                <span className="tech-tag">EmailJS</span>
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a href="https://github.com/KVSC1511/My-Personal-Portfolio.git" target="_blank" rel="noopener noreferrer" className="text-[--main-color] hover:text-white transition-colors">
+                  <i className='bx bxl-github'></i> GitHub
+                </a>
+                <a href="https://www.venkatasaicharan.com" target="_blank" rel="noopener noreferrer" className="text-[--main-color] hover:text-white transition-colors">
+                  <i className='bx bx-link-external'></i> Live Site
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* 2023 Project */}
           <div className="project-card group">
             <div className="card-content">
