@@ -214,7 +214,7 @@ const App = () => {
             <div className="card-content">
               <h3 className="text-xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
               <p className="text-[--main-color] mb-4">Amazon Web Services (AWS)</p>
-              <div className="flex items-center gap-2 mb-0">
+              <div className="flex items-center gap-2 mb-4">
                 <FaAws className="text-2xl text-[--main-color]" />
                 <a 
                   href="https://cp.certmetrics.com/amazon/en/public/verify/credential/2a4a927b8cf14781975cd89adc323106"

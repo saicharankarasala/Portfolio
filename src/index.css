@@ -204,10 +204,104 @@
   }
 
   /* Cards */
-  .project-card {
+  .card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
            border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
            shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply transform scale-105 shadow-[0_0_25px_var(--main-color)];
+  }
+
+  /* Text Animation */
+  .text-animation {
+    @apply text-2xl md:text-[34px] font-semibold min-w-[280px];
+  }
+
+  .text-animation span {
+    @apply relative;
+  }
+
+  .text-animation span::before {
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+  }
+
+  .text-animation span::after {
+    content: "";
+    @apply absolute w-[calc(100%_+_8px)] h-full right-[-8px];
+    background-color: var(--bg-color);
+    border-left: 3px solid var(--bg-color);
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .home {
+      @apply pt-24 pb-12 px-6;
+    }
+
+    .home-content {
+      @apply text-center items-center;
+    }
+
+    .home-content h1 {
+      @apply text-4xl mb-4;
+    }
+
+    .home-content h3 {
+      @apply text-xl mb-4;
+    }
+
+    .home-content p {
+      @apply text-base;
+    }
+
+    .social-icons {
+      @apply flex justify-center gap-4;
+    }
+
+    .btn-group {
+      @apply flex flex-wrap justify-center gap-4;
+    }
+
+    .home-img {
+      @apply order-first mt-16;
+    }
+
+    .home-img img {
+      @apply w-[280px] h-[280px]
+             object-cover;
+      object-position: center 20%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-link {
+      @apply block w-full py-2;
+    }
+
+    .nav-link::after {
+      @apply bottom-0;
+    }
+
+    .nav-link.active::after {
+      @apply w-1/4;
+    }
+  }
+
+  /* Mobile Menu Button */
+  button.active .bx-x {
+    @apply transform rotate-180;
+  }
+
+  /* Projects Section */
+  .project-card {
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
+           border border-[rgb(0,255,238)] relative overflow-hidden
+           transition-all duration-300;
   }
 
   .project-card:hover {
@@ -442,9 +536,10 @@
   }
 
   .stat-box {
-    @apply flex flex-col items-center text-center bg-black/20 backdrop-blur-sm rounded-xl p-6
-           border border-[rgb(0,255,238)]
-           shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-6
+           border border-[rgb(0,255,238)] text-center
+           transition-all duration-300 hover:scale-105
+           hover:shadow-[0_0_25px_var(--main-color)];
   }
 
   .stat-box h3 {
@@ -779,9 +874,9 @@
   }
 
   .certification-card {
-    @apply bg-black/20 backdrop-blur-sm rounded-xl p-8  
-           border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
-           shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
+    @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
+           border border-[rgb(0,255,238)] relative overflow-hidden
+           transition-all duration-300;
   }
 
   .certification-card:hover {
