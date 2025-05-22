@@ -206,7 +206,7 @@
   /* Cards */
   .project-card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-8 
-           border-2 border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
+           border border-[rgb(0,255,238)] relative overflow-hidden cursor-pointer
            shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
   }
 
@@ -443,7 +443,7 @@
 
   .stat-box {
     @apply flex flex-col items-center text-center bg-black/20 backdrop-blur-sm rounded-xl p-6
-           border-2 border-[rgb(0,255,238)]
+           border border-[rgb(0,255,238)]
            shadow-[0_0_10px_var(--main-color)] transition-all duration-300;
   }
 
@@ -780,7 +780,8 @@
 
   .certification-card {
     @apply bg-black/20 backdrop-blur-sm rounded-xl p-6 
-           border-2 border-[rgb(0,255,238)] relative overflow-hidden
+           border border-[rgb(0,255,238)] relative overflow-hidden
+           shadow-[0_0_10px_var(--main-color)]
            transition-all duration-300;
   }
 
@@ -798,7 +799,7 @@
   }
 
   .certification-card:hover::before {
-    opacity: 1;
+    /* opacity: 1; */
   }
 
   .certification-card .card-content {
