@@ -338,6 +338,11 @@
     @apply bg-[--main-color] text-black scale-110;
   }
 
+  .tech-tag-red {
+    @apply px-3 py-1 text-sm rounded-full bg-red-500 text-white
+           transition-all duration-300 hover:scale-110;
+  }
+
   /* Remove testimonials styles */
   .testimonials-box,
   .testimonial-item,

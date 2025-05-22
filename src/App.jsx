@@ -100,6 +100,10 @@ const App = () => {
               <i className='bx bx-user'></i>
               About
             </a>
+            <a href="#skills" onClick={() => setIsMenuOpen(false)}>
+              <i className='bx bx-book'></i>
+              Skills
+            </a>
             <a href="#education" onClick={() => setIsMenuOpen(false)}>
               <i className='bx bx-book'></i>
               Education
@@ -176,6 +180,67 @@ const App = () => {
             <h3>4+</h3>
             <p>Years Experience</p>
           </div>
+        </div>
+      </section>
+
+      <section className="skills pt-12 pb-12 px-[12%]" id="skills">
+        <h2 className="heading">My <span>Skills</span></h2>
+        <div className="flex flex-wrap gap-2 justify-center">
+          {/* Updated Skills */}
+          <span className="tech-tag">Python</span>
+          <span className="tech-tag">Java</span>
+          <span className="tech-tag">C#/.NET</span>
+          <span className="tech-tag">JavaScript (Node.js)</span>
+          <span className="tech-tag">SQL</span>
+          <span className="tech-tag">HTML</span>
+          <span className="tech-tag">CSS</span>
+          <span className="tech-tag">MySQL</span>
+          <span className="tech-tag">SQL Server</span>
+          <span className="tech-tag">Hadoop</span>
+          <span className="tech-tag">Apache Spark</span>
+          <span className="tech-tag">Apache Hive</span>
+          <span className="tech-tag">Apache Pig</span>
+          <span className="tech-tag">AWS</span>
+          <span className="tech-tag">Microsoft Azure</span>
+          <span className="tech-tag">Docker</span>
+          <span className="tech-tag">Kubernetes</span>
+          <span className="tech-tag">Git</span>
+          <span className="tech-tag">Azure Data Factory</span>
+          <span className="tech-tag">UiPath RPA</span>
+          <span className="tech-tag">Tableau</span>
+          <span className="tech-tag">Power BI</span>
+          <span className="tech-tag">Microsoft Power Platform</span>
+          <span className="tech-tag">Informatica PowerCenter</span>
+          <span className="tech-tag">RESTful APIs</span>
+          <span className="tech-tag">Microservices</span>
+          <span className="tech-tag">Kafka</span>
+          <span className="tech-tag">Penetration Testing</span>
+          <span className="tech-tag">Cryptographic Algorithms</span>
+          <span className="tech-tag">Linux Shell Scripting</span>
+          <span className="tech-tag">Visual Studio</span>
+          <span className="tech-tag">Visual Studio Code</span>
+          <span className="tech-tag">Postman</span>
+          <span className="tech-tag">JIRA</span>
+          <span className="tech-tag">Microsoft Office Suite</span>
+          <span className="tech-tag">Windows</span>
+          <span className="tech-tag">Linux</span>
+          <span className="tech-tag">Ubuntu</span>
+          <span className="tech-tag">macOS</span>
+          <span className="tech-tag">Network Troubleshooting</span>
+          <span className="tech-tag">IP Addressing</span>
+          <span className="tech-tag">Wireless Networking</span>
+          <span className="tech-tag">Network Configuration</span>
+          <span className="tech-tag">IoT</span>
+          <span className="tech-tag">Ultrasonic Sensors</span>
+          <span className="tech-tag">Raspberry Pi</span>
+          <span className="tech-tag">Agile</span>
+          <span className="tech-tag">Data Visualization</span>
+          <span className="tech-tag">ETL Pipelines</span>
+          <span className="tech-tag">System Integration</span>
+          <span className="tech-tag">Big Data Technologies</span>
+          <span className="tech-tag">Data Analytics</span>
+          <span className="tech-tag">Cloud-Based Solutions</span>
+          <span className="tech-tag">Secure Backend Architectures</span>
         </div>
       </section>
 
