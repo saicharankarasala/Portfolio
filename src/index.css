@@ -330,12 +330,12 @@
   }
 
   .tech-tag {
-    @apply px-3 py-1 text-sm rounded-full bg-white/10 text-white/90
+    @apply px-3 py-1 text-sm rounded-full bg-[--main-color] text-black
            border border-[--main-color] transition-all duration-300;
   }
 
   .tech-tag:hover {
-    @apply bg-[--main-color] text-black scale-110;
+    @apply scale-110 shadow-[0_0_10px_var(--main-color)];
   }
 
   .tech-tag-red {
@@ -907,12 +907,12 @@
   }
 
   .tech-tag {
-    @apply px-3 py-1 text-sm rounded-full bg-white/10 text-white/90
+    @apply px-3 py-1 text-sm rounded-full bg-[--main-color] text-black
            border border-[--main-color] transition-all duration-300;
   }
 
   .tech-tag:hover {
-    @apply bg-[--main-color] text-black scale-110;
+    @apply scale-110 shadow-[0_0_10px_var(--main-color)];
   }
 }
 
