@@ -447,7 +447,7 @@ const App = () => {
                 <span className="tech-tag">EmailJS</span>
               </div>
               <div className="mt-4 flex gap-4">
-                <a href="https://github.com/KVSC1511/My-Personal-Portfolio.git" target="_blank" rel="noopener noreferrer" className="text-[--main-color] hover:text-white transition-colors">
+                <a href="https://github.com/KVSC1511/Portfolio" target="_blank" rel="noopener noreferrer" className="text-[--main-color] hover:text-white transition-colors">
                   <i className='bx bxl-github'></i> GitHub
                 </a>
                 <a href="https://www.venkatasaicharan.com" target="_blank" rel="noopener noreferrer" className="text-[--main-color] hover:text-white transition-colors">
