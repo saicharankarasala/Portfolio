@@ -585,7 +585,7 @@ const App = () => {
         </div>
         
         <div className="footer-copyright">
-          © Venkata Sai Charan | All Rights Reserved
+          © Venkata Sai Charan 🇺🇸 | All Rights Reserved
         </div>
       </footer>
       <SpeedInsights />
