@@ -3,23 +3,8 @@
   "name": "vsc1511",
   "public": true,
   "routes": [
-    {
-      "src": "^/assets/(.*)\\.js$",
-      "headers": { "content-type": "application/javascript" },
-      "continue": true
-    },
-    {
-      "src": "^/assets/(.*)\\.css$",
-      "headers": { "content-type": "text/css" },
-      "continue": true
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ],
   "builds": [
     {
