@@ -66,12 +66,6 @@ const Blog = () => {
         <div className="flex flex-row gap-8 lg:pr-72">
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            {/* Back to Portfolio Button (Mobile & Desktop) */}
-            <div className="mb-4">
-              <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition">
-                ← Back to Portfolio
-              </a>
-            </div>
             {/* Mobile TOC */}
             <div className="lg:hidden mb-6">
               <button
@@ -685,7 +679,7 @@ const Blog = () => {
               overflowY: 'auto'
             }}
           >
-            {/* Back to Portfolio Button (Desktop) */}
+            {/* Back to Portfolio Button (Desktop only) */}
             <div className="mb-6">
               <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition mb-4">
                 ← Back to Portfolio
