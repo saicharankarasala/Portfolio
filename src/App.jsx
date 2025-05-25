@@ -84,72 +84,48 @@ const App = () => {
                     <span className="text-white">V </span>
                     <span className="text-[--main-color]">S C</span>
                   </a>
-                  
-                  {/* Hamburger Menu */}
-                  <button
-                    className="hamburger-menu md:hidden"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
-                  >
-                    <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </button>
-
-                  {/* Mobile Navigation Menu */}
-                  <div className={`dropdown-menu ${isMenuOpen ? 'open' : 'closed'}`}>
-                    <a href="#home" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-home-alt'></i>
-                      Home
-                    </a>
-                    <a href="#about" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-user'></i>
-                      About
-                    </a>
-                    <a href="#skills" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-book'></i>
-                      Skills
-                    </a>
-                    <a href="#education" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-book'></i>
-                      Education
-                    </a>
-                    <a href="#certifications" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-certification'></i>
-                      Certifications
-                    </a>
-                    <a href="#experience" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-briefcase'></i>
-                      Experience
-                    </a>
-                    <a href="#projects" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-code-alt'></i>
-                      Projects
-                    </a>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-envelope'></i>
-                      Contact
-                    </a>
-                    <a href="/blog/portfolio-case-study" onClick={() => setIsMenuOpen(false)}>
-                      <i className='bx bx-book-content'></i>
-                      Blog
-                    </a>
+                  <div className="flex items-center gap-4 relative">
+                    <a href="#contact" className="text-white hover:text-[--main-color] font-medium transition-colors">Contact</a>
+                    <button
+                      className="hamburger-menu"
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      aria-label="Toggle menu"
+                    >
+                      <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </button>
+                    {isMenuOpen && (
+                      <div className="dropdown-menu open">
+                        <a href="#home" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-home-alt'></i> Home
+                        </a>
+                        <a href="#about" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-user'></i> About
+                        </a>
+                        <a href="#skills" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-book'></i> Skills
+                        </a>
+                        <a href="#education" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-book'></i> Education
+                        </a>
+                        <a href="#certifications" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-certification'></i> Certifications
+                        </a>
+                        <a href="#experience" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-briefcase'></i> Experience
+                        </a>
+                        <a href="#projects" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-code-alt'></i> Projects
+                        </a>
+                        <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-envelope'></i> Contact
+                        </a>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Desktop Navigation Menu */}
-                  <nav className="hidden md:flex space-x-8">
-                    <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Home</ScrollLink>
-                    <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">About</ScrollLink>
-                    <ScrollLink to="skills" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Skills</ScrollLink>
-                    <ScrollLink to="education" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Education</ScrollLink>
-                    <ScrollLink to="certifications" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Certifications</ScrollLink>
-                    <ScrollLink to="experience" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Experience</ScrollLink>
-                    <ScrollLink to="projects" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Projects</ScrollLink>
-                    <ScrollLink to="contact" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Contact</ScrollLink>
-                    <a href="/blog/portfolio-case-study" className="hover:text-[--main-color] transition-colors">Blog</a>
-                  </nav>
                 </nav>
               </header>
 
