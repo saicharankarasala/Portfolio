@@ -123,6 +123,9 @@ const App = () => {
                         <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                           <i className='bx bx-envelope'></i> Contact
                         </a>
+                        <a href="/blog/portfolio-case-study" onClick={() => setIsMenuOpen(false)}>
+                          <i className='bx bx-book-content'></i> Blog
+                        </a>
                       </div>
                     )}
                   </div>
