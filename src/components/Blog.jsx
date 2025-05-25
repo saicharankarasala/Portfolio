@@ -66,9 +66,9 @@ const Blog = () => {
         <div className="flex flex-row gap-8 lg:pr-72">
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            {/* Mobile Back to Portfolio Button */}
-            <div className="lg:hidden mb-4">
-              <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition mb-2">
+            {/* Back to Portfolio Button (Mobile & Desktop) */}
+            <div className="mb-4">
+              <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition">
                 ← Back to Portfolio
               </a>
             </div>
@@ -678,13 +678,19 @@ const Blog = () => {
             className="hidden lg:block w-64 flex-shrink-0"
             style={{
               position: 'fixed',
-              top: '6rem', // adjust for header height
-              right: '3rem', // adjust for layout
+              top: '6rem',
+              right: '3rem',
               zIndex: 30,
               maxHeight: '80vh',
               overflowY: 'auto'
             }}
           >
+            {/* Back to Portfolio Button (Desktop) */}
+            <div className="mb-6">
+              <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition mb-4">
+                ← Back to Portfolio
+              </a>
+            </div>
             <nav>
               <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 font-sans">
                 <h3 className="text-base font-bold mb-3 text-[--main-color] tracking-wide uppercase">Table of Contents</h3>
