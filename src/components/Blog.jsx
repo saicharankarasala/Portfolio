@@ -63,36 +63,7 @@ const Blog = () => {
         <meta name="description" content="A full case study blog by Venkat Sai Charan on building his personal portfolio using React, Tailwind, Vite, and Framer Motion." />
       </Helmet>
       <div className="relative bg-white min-h-screen w-full px-2 md:px-8 py-10 pt-24 text-gray-900 prose lg:prose-xl prose-a:text-[--main-color] prose-a:no-underline hover:prose-a:underline prose-headings:!text-gray-900 prose-strong:text-[--main-color]">
-        <div className="flex flex-row gap-8">
-          {/* Sidebar TOC (Desktop) */}
-          <aside className="hidden lg:block w-64 flex-shrink-0">
-            <div className="mb-6">
-              <a href="/" className="inline-block w-full text-center bg-[--main-color] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[--main-color]/90 transition mb-4">
-                ← Back to Portfolio
-              </a>
-            </div>
-            <nav className="sticky top-24">
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 font-sans">
-                <h3 className="text-base font-bold mb-3 text-[--main-color] tracking-wide uppercase">Table of Contents</h3>
-                <ul className="space-y-1">
-                  {tocItems.map(item => (
-                    <li key={item.id}>
-                      <a
-                        href={`#${item.id}`}
-                        className={`block px-3 py-2 rounded-md transition-colors text-sm font-medium
-                          ${activeId === item.id
-                            ? 'bg-[--main-color]/10 text-[--main-color] font-bold border-l-4 border-[--main-color]'
-                            : 'text-gray-700 hover:bg-gray-100 hover:text-[--main-color]'}
-                        `}
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </nav>
-          </aside>
+        <div className="flex flex-row gap-8 lg:pr-72">
           {/* Main Content */}
           <main className="flex-1 min-w-0">
             {/* Mobile Back to Portfolio Button */}
@@ -529,7 +500,7 @@ const Blog = () => {
             <SectionTitle id="page-6">🎯 Page 6: Conversion Ready</SectionTitle>
             <SubTitle>Driving Action, Not Just Views</SubTitle>
             <Divider />
-            <Callout>�� "Traffic is vanity. Conversion is sanity."<br/>— Brian Massey, Conversion Scientist</Callout>
+            <Callout>🎓 "Traffic is vanity. Conversion is sanity."<br/>— Brian Massey, Conversion Scientist</Callout>
             <Divider />
             <SubTitle>💡 The Goal: Turn Visitors into Opportunities</SubTitle>
             <p>A beautiful portfolio doesn't mean much if it doesn't spark action. Once my portfolio started attracting traffic through search, shares, and referrals, my next challenge was conversion:</p>
@@ -576,7 +547,7 @@ const Blog = () => {
             <ul>
               <li>💼 Under Projects: "Interested in something similar? Let's talk"</li>
               <li>📩 At the bottom of each page: "Have questions or want to collaborate? I'd love to hear from you."</li>
-              <li>�� In mobile view: Sticky bottom bar with: "👋 Let's Connect"</li>
+              <li> In mobile view: Sticky bottom bar with: "👋 Let's Connect"</li>
             </ul>
             <Divider />
             <SubTitle>📈 Results from CTA Testing</SubTitle>
@@ -699,6 +670,51 @@ const Blog = () => {
             <p>🖼️ <strong>Visual Suggestion:</strong> A clean "Thank You" screen with a subtle animation or waving hand emoji.<br/>"Thanks for reading. Now go build yours."</p>
             <Divider />
           </main>
+          {/* Sidebar TOC (Desktop, Fixed, Right) */}
+          <motion.aside
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="hidden lg:block w-64 flex-shrink-0"
+            style={{
+              position: 'fixed',
+              top: '6rem', // adjust for header height
+              right: '3rem', // adjust for layout
+              zIndex: 30,
+              maxHeight: '80vh',
+              overflowY: 'auto'
+            }}
+          >
+            <nav>
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 font-sans">
+                <h3 className="text-base font-bold mb-3 text-[--main-color] tracking-wide uppercase">Table of Contents</h3>
+                <ul className="space-y-1">
+                  {tocItems.map(item => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        className={`block px-3 py-2 rounded-md transition-colors text-sm font-medium
+                          ${activeId === item.id
+                            ? 'bg-[--main-color]/10 text-[--main-color] font-bold border-l-4 border-[--main-color]'
+                            : 'text-gray-700 hover:bg-gray-100 hover:text-[--main-color]'}
+                        `}
+                        onClick={e => {
+                          e.preventDefault();
+                          const el = document.getElementById(item.id);
+                          if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            window.history.replaceState(null, '', `#${item.id}`);
+                          }
+                        }}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </nav>
+          </motion.aside>
         </div>
       </div>
     </>
