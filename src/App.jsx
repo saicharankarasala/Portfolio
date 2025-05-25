@@ -87,7 +87,7 @@ const App = () => {
                   
                   {/* Hamburger Menu */}
                   <button
-                    className="hamburger-menu"
+                    className="hamburger-menu md:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
                   >
@@ -116,6 +116,10 @@ const App = () => {
                       <i className='bx bx-book'></i>
                       Education
                     </a>
+                    <a href="#certifications" onClick={() => setIsMenuOpen(false)}>
+                      <i className='bx bx-certification'></i>
+                      Certifications
+                    </a>
                     <a href="#experience" onClick={() => setIsMenuOpen(false)}>
                       <i className='bx bx-briefcase'></i>
                       Experience
@@ -140,6 +144,7 @@ const App = () => {
                     <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">About</ScrollLink>
                     <ScrollLink to="skills" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Skills</ScrollLink>
                     <ScrollLink to="education" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Education</ScrollLink>
+                    <ScrollLink to="certifications" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Certifications</ScrollLink>
                     <ScrollLink to="experience" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Experience</ScrollLink>
                     <ScrollLink to="projects" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Projects</ScrollLink>
                     <ScrollLink to="contact" smooth={true} duration={500} className="cursor-pointer hover:text-[--main-color] transition-colors">Contact</ScrollLink>
