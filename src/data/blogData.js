@@ -14,272 +14,109 @@ export const blogPosts = [
     readingTime: "8 min read",
     lastUpdated: "2024-06-15",
     content: `
-      <article class="max-w-3xl mx-auto px-4 py-12">
-        <!-- Blog Title -->
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 leading-tight">The Code Behind the Canvas: How I Engineered My Personal Portfolio with React, Tailwind & Analytics</h1>
-        
-        <!-- Meta Info -->
-        <div class="flex items-center text-gray-500 text-sm mb-8 space-x-4">
-          <img src="/images/avatar.jpg" class="w-8 h-8 rounded-full" alt="Author" />
-          <span class="font-medium text-gray-800">Venkata Sai Charan</span>
-          <span>•</span>
-          <span>June 10, 2024</span>
-          <span>•</span>
-          <span>8 min read</span>
-        </div>
-
-        <!-- Hero Image (Portfolio Screenshot) -->
-        <img src="/images/Thumbnail.jpg" class="rounded-xl mb-12 shadow-lg" alt="Portfolio Preview" />
-
-        <!-- Blog Content -->
-        <div class="prose prose-lg max-w-none text-gray-800">
-          <section id="portfolio-revolution" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">🧭</span>
-              The Portfolio Revolution
-            </h2>
-            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl mb-8">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-900">Why Portfolios Are the New Resumes</h3>
-              <blockquote class="border-l-4 border-blue-500 pl-4 italic text-lg text-gray-800 mb-6">
-                "In today's market, your personal website is your first interview."
-                <span class="block text-sm text-gray-600 mt-2">— Tech Recruiter at Google (2024)</span>
-              </blockquote>
-              <p class="text-gray-800 mb-6">For years, the one-page PDF resume was the universal key to unlocking job opportunities. But in a world where attention spans are shrinking and creativity matters more than ever, static resumes just don't cut it.</p>
-              <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h4 class="text-xl font-semibold mb-4 text-gray-900">Key Statistics</h4>
-                <ul class="space-y-3">
-                  <li class="flex items-center text-gray-800">
-                    <span class="text-blue-600 mr-2">📊</span>
-                    Developers with personal portfolios get 3x more callbacks
-                  </li>
-                  <li class="flex items-center text-gray-800">
-                    <span class="text-blue-600 mr-2">📈</span>
-                    76% of hiring managers prefer reviewing live demos
-                  </li>
-                  <li class="flex items-center text-gray-800">
-                    <span class="text-blue-600 mr-2">⏳</span>
-                    Recruiters spend only 7.4 seconds per resume unless something stands out
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section id="blueprint" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">🏗️</span>
-              The Blueprint
-            </h2>
-            <div class="space-y-12">
-              <!-- Tech Stack Table -->
-              <div class="bg-white p-8 rounded-xl shadow-sm">
-                <h3 class="text-2xl font-semibold mb-6 text-gray-900">Tech Stack</h3>
-                <div class="overflow-x-auto">
-                  <table class="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr class="bg-gray-100">
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400 border-r border-gray-300">Layer</th>
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400 border-r border-gray-300">Technology</th>
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400">Why I Chose It</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Frontend</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">React</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">Component-based, scalable</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Styling</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">Tailwind CSS</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">Utility-first, responsive</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Build Tool</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">Vite</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">Fast dev server and build</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Hosting</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">Vercel</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">CI/CD and CDN combined</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-r border-gray-300">Animation</td>
-                        <td class="py-4 px-4 text-gray-800 border-r border-gray-300">Framer Motion</td>
-                        <td class="py-4 px-4 text-gray-800">Smooth microinteractions</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <!-- Performance Metrics Table -->
-              <div class="bg-white p-8 rounded-xl shadow-sm">
-                <h3 class="text-2xl font-semibold mb-6 text-gray-900">Performance Metrics</h3>
-                <div class="overflow-x-auto">
-                  <table class="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr class="bg-gray-100">
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400 border-r border-gray-300">Metric</th>
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400 border-r border-gray-300">Score</th>
-                        <th class="text-left py-4 px-4 text-gray-900 font-semibold border-b-2 border-gray-400">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Performance</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">
-                          <span class="text-green-600 font-bold text-lg">99</span>
-                        </td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">Page load and runtime performance</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Accessibility</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">
-                          <span class="text-green-600 font-bold text-lg">97</span>
-                        </td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">WCAG compliance and screen reader support</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-b border-r border-gray-300">Best Practices</td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-r border-gray-300">
-                          <span class="text-green-600 font-bold text-lg">100</span>
-                        </td>
-                        <td class="py-4 px-4 text-gray-800 border-b border-gray-300">Modern web development standards</td>
-                      </tr>
-                      <tr class="hover:bg-gray-50">
-                        <td class="py-4 px-4 text-gray-800 font-medium border-r border-gray-300">SEO</td>
-                        <td class="py-4 px-4 text-gray-800 border-r border-gray-300">
-                          <span class="text-green-600 font-bold text-lg">98</span>
-                        </td>
-                        <td class="py-4 px-4 text-gray-800">Search engine optimization score</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <!-- System Architecture -->
-              <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-xl">
-                <h3 class="text-2xl font-semibold mb-6 text-gray-900">System Architecture</h3>
-                <pre class="bg-white p-6 rounded-lg shadow-sm overflow-x-auto text-gray-800 font-mono text-sm">
-[User Browser]
-      ↓
-  [Vercel CDN] ← GitHub Actions
-      ↓
-   [Vite Build]
-      ↓
-[React App Components]
-      ↓
-[EmailJS (Client-Side Email)]</pre>
-              </div>
-            </div>
-          </section>
-
-          <section id="mockup-motion" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">🎨</span>
-              From Mockup to Motion
-            </h2>
-            <div class="bg-white p-6 rounded-xl shadow-sm mb-8">
-              <p class="text-gray-800 mb-6">I wireframed the site in Figma, and then translated designs to Tailwind components. Framer Motion made the whole thing come alive with gentle fade-ins, slide-ups, and entrance animations.</p>
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <pre class="text-sm text-gray-800"><code>&lt;motion.div 
-  initial={{opacity:0}} 
-  animate={{opacity:1}}
-&gt;
-  Hello World
-&lt;/motion.div&gt;</code></pre>
-              </div>
-            </div>
-          </section>
-
-          <section id="data-game" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">📊</span>
-              The Data Game
-            </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-3xl mb-2">📈</div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-900">Google Analytics</h4>
-                <p class="text-gray-800">Track session time and user behavior</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-3xl mb-2">🔥</div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-900">Hotjar</h4>
-                <p class="text-gray-800">Visualize user interaction with heatmaps</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-3xl mb-2">📧</div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-900">EmailJS</h4>
-                <p class="text-gray-800">Monitor contact form conversions</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="seo-speed" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">⚡</span>
-              SEO & Speed
-            </h2>
-            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
-              <ul class="space-y-4">
-                <li class="flex items-center text-gray-800">
-                  <span class="text-2xl mr-3">🏁</span>
-                  <span>Performance score: 99</span>
-                </li>
-                <li class="flex items-center text-gray-800">
-                  <span class="text-2xl mr-3">🚀</span>
-                  <span>Deployed to Vercel with global edge network</span>
-                </li>
-                <li class="flex items-center text-gray-800">
-                  <span class="text-2xl mr-3">🔍</span>
-                  <span>Indexed with Google Search Console</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="conversion" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">🎯</span>
-              Conversion Ready
-            </h2>
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-              <p class="text-gray-800">I optimized each page to drive action. Sticky mobile bars, clear CTAs, and a fast EmailJS-powered contact form turned visits into conversations.</p>
-            </div>
-          </section>
-
-          <section id="resources" class="mb-16 scroll-mt-20">
-            <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900">
-              <span class="mr-3">🧩</span>
-              TL;DR + Resources
-            </h2>
-            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl">
-              <ul class="space-y-4">
-                <li class="flex items-start text-gray-800">
-                  <span class="text-2xl mr-3">✨</span>
-                  <span><strong>Success Formula:</strong> Tech + Design + Speed + Intent</span>
-                </li>
-                <li class="flex items-start text-gray-800">
-                  <span class="text-2xl mr-3">🎁</span>
-                  <span>Free Dev Portfolio Kit (Meta tags, Tailwind config, Framer snippets)</span>
-                </li>
-                <li class="flex items-start text-gray-800">
-                  <span class="text-2xl mr-3">🤝</span>
-                  <span>Contact me for code reviews, portfolio help, or collaboration!</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <div class="text-center mt-12">
-            <p class="text-xl text-gray-800">Thanks for reading. Now go build yours 🚀</p>
-          </div>
-        </div>
-      </article>
+<article class="prose lg:prose-xl max-w-none mx-auto p-6">
+  <h1 class="mb-8">🚀 Building My Portfolio with React & Tailwind: A Developer's Journey</h1>
+  <section class="mb-10">
+    <p class="mb-4">In today's digital-first world, your portfolio is your handshake. It's not just about listing skills — it's about proving them. When I set out to build <a href="https://www.venkatasaicharan.com" target="_blank">venkatasaicharan.com</a>, my goal was clear: to create a portfolio that reflects who I am as a software engineer — clean, fast, interactive, and thoughtfully engineered.</p>
+    <p>This blog shares how I built my portfolio from the ground up using <strong>React</strong>, <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>Framer Motion</strong> — and the key decisions, tools, and techniques that brought it all together.</p>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">🧱 Why I Chose React + Tailwind</h2>
+    <p class="mb-4">React has been my go-to for building component-driven UIs, and with <strong>Vite</strong> as the dev server, I had instant hot reload and lightning-fast builds. I paired this with <strong>Tailwind CSS</strong> for utility-first styling — enabling rapid prototyping without the bloat of custom CSS.</p>
+    <blockquote class="mb-4">"I didn't want to just build a website. I wanted to engineer an experience."</blockquote>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">✨ Features That Set It Apart</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Animated Page Transitions</strong>: Powered by <code>Framer Motion</code> for a polished feel.</li>
+      <li><strong>Dark/Light Theme Toggle</strong>: Built using React Context API for user preference.</li>
+      <li><strong>Responsive Design</strong>: Fully fluid experience from mobile to desktop.</li>
+      <li><strong>EmailJS Integration</strong>: Direct contact form that doesn't require opening email clients.</li>
+      <li><strong>React Router</strong>: Seamless client-side routing.</li>
+    </ul>
+  </section>
+  <section class="mb-10">
+    <h3 class="mb-4 text-xl font-semibold text-gray-900">Site Architecture</h3>
+    <pre class="mermaid mb-6">
+graph TD
+  A[App.jsx] --> B[Navbar]
+  A --> C[Routes]
+  C --> D[Home.jsx]
+  C --> E[Projects.jsx]
+  C --> F[Contact.jsx]
+  A --> G[ThemeProvider]
+</pre>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">📂 Project Sections Built with Purpose</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>About Me</strong>: Snapshot of my journey and personality.</li>
+      <li><strong>Projects</strong>: Real-world applications showcasing both frontend and backend skills.</li>
+      <li><strong>Experience & Education</strong>: Timeline format for clarity and context.</li>
+      <li><strong>Certifications</strong>: Proving my commitment to continuous learning.</li>
+      <li><strong>Contact</strong>: Conversion-optimized and functional.</li>
+    </ul>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">🛠️ Tech Stack</h2>
+    <table class="mb-6">
+      <thead>
+        <tr><th>Tool / Framework</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>React</td><td>Component-based UI</td></tr>
+        <tr><td>Vite</td><td>Fast build & hot reload</td></tr>
+        <tr><td>Tailwind CSS</td><td>Utility-first styling</td></tr>
+        <tr><td>Framer Motion</td><td>Elegant animations</td></tr>
+        <tr><td>EmailJS</td><td>Email form integration</td></tr>
+        <tr><td>React Router</td><td>Page navigation</td></tr>
+      </tbody>
+    </table>
+    <h3 class="mb-4 text-xl font-semibold text-gray-900">Tech Stack Overview</h3>
+    <pre class="mermaid mb-6">
+graph TD
+  React --> Tailwind_CSS
+  React --> Vite
+  React --> Framer_Motion
+  React --> EmailJS
+  React --> React_Router
+</pre>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">🧠 Lessons Learned</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Design before development</strong>: Used Figma to wireframe ideas.</li>
+      <li><strong>Use semantic naming</strong>: Tailwind classes are more readable with logical labels.</li>
+      <li><strong>Minimalism matters</strong>: Removed clutter for UX clarity.</li>
+      <li><strong>Accessibility is key</strong>: Ensured keyboard and screen reader compatibility.</li>
+    </ul>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">📣 Takeaway for Employers</h2>
+    <p class="mb-4">I believe great engineers don't just code — they communicate, design, and deliver. My portfolio is a living example of my front-to-back skillset, UI instincts, and problem-solving mindset.</p>
+    <p>If you're an employer or collaborator viewing my site, I'd love to connect. My inbox is always open.</p>
+  </section>
+  <hr class="my-10" />
+  <section class="mb-10">
+    <h2 class="mb-4 text-2xl font-bold text-gray-900">🙌 Want to Build Your Own?</h2>
+    <p class="mb-4">If you're a developer starting out:</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Start small and build iteratively.</li>
+      <li>Choose tools you enjoy using and want to master.</li>
+      <li>Don't just list features — explain decisions.</li>
+    </ul>
+    <blockquote class="mt-6">
+      You can find the source code here: 
+      <a href="https://github.com/KVSC1511/My-Personal-Portfolio.git" target="_blank">GitHub – My Personal Portfolio</a>
+    </blockquote>
+  </section>
+</article>
     `
   },
 ]; 
