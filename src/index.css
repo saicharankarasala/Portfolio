@@ -37,24 +37,37 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Inter'] tracking-wide text-white;
+    @apply font-['Inter'] tracking-wide;
   }
 
   #root {
     @apply min-h-screen relative;
   }
 
-  /* Scrollbar */
+  /* Custom native scrollbar for all browsers */
   ::-webkit-scrollbar {
-    @apply w-[6px];
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-black/20;
+    width: 6px;
+    background: #f1f1f1;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300;
+    background: var(--main-color);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00e6d6;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  /* Firefox */
+  html {
+    scrollbar-color: var(--main-color) #f1f1f1;
+    scrollbar-width: thin;
   }
 
   /* Text selection */
@@ -1238,4 +1251,19 @@
     background-color: transparent;
     box-shadow: none;
   }
+}
+
+.prose h2 {
+  color: #111827 !important; /* Tailwind gray-900 */
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.25rem !important;
+  margin-top: 2.5rem !important;
+}
+.prose h3 {
+  color: #111827 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+  margin-top: 2rem !important;
 } 
