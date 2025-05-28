@@ -11,8 +11,8 @@ export const blogPosts = [
       avatar: "/images/avatar.jpg",
       role: "Full Stack Developer"
     },
-    readingTime: "8 min read",
-    lastUpdated: "2024-06-15",
+    readingTime: "5 min read",
+    lastUpdated: "05-10-2025",
     content: `
 <article class="prose lg:prose-xl max-w-none mx-auto p-6">
   <h1 class="mb-10 text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">🚀 Building My Portfolio with React & Tailwind: A Developer's Journey</h1>
