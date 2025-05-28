@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Link as ScrollLink } from 'react-scroll';
 import { 
@@ -22,6 +22,8 @@ import VscLogo from './components/VscLogo';
 import BackgroundLogo from './components/BackgroundLogo';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Blog from './components/Blog';
+import BlogLanding from "./pages/BlogLanding";
+import BlogPost from "./pages/BlogPost";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,9 +73,10 @@ const App = () => {
 
   return (
     <HelmetProvider>
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route path="/blog/portfolio-case-study" element={<Blog />} />
+          <Route path="/blog" element={<BlogLanding />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/" element={
             <div className="bg-black min-h-screen text-white relative">
               <BackgroundLogo />
@@ -86,6 +89,7 @@ const App = () => {
                   </a>
                   <div className="flex items-center gap-4 relative">
                     <a href="#contact" className="text-white hover:text-[--main-color] font-medium transition-colors">Contact</a>
+                    <a href="/blog" className="text-white hover:text-[--main-color] font-medium transition-colors">Blog</a>
                     <button
                       className="hamburger-menu"
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -123,7 +127,7 @@ const App = () => {
                         <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                           <i className='bx bx-envelope'></i> Contact
                         </a>
-                        <a href="/blog/portfolio-case-study" onClick={() => setIsMenuOpen(false)}>
+                        <a href="/blog" onClick={() => setIsMenuOpen(false)}>
                           <i className='bx bx-book-content'></i> Blog
                         </a>
                       </div>
@@ -600,7 +604,7 @@ const App = () => {
             </div>
           } />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </HelmetProvider>
   );
 };

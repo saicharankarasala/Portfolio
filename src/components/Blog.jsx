@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ParallaxBackground from './ParallaxBackground';
+import BlogNavbar from './BlogNavbar';
 
 const Divider = () => <div className="my-8 border-t border-gray-300 dark:border-gray-700" />;
 const SectionTitle = ({ id, children }) => (
@@ -98,6 +99,8 @@ const Blog = () => {
     <>
       {/* Parallax Background */}
       <ParallaxBackground />
+      {/* Blog-specific Navbar */}
+      <BlogNavbar title="The Code Behind the Canvas" readingTime={readingTime} progress={progress} />
       {/* Sticky Share Buttons (always visible, top-level) */}
       <div className="sticky-share-buttons">
         <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.venkatasaicharan.com/blog" target="_blank" rel="noopener noreferrer" className="share-button linkedin">LinkedIn</a>
@@ -115,7 +118,7 @@ const Blog = () => {
         <title>The Code Behind the Canvas: How I Engineered My Personal Brand</title>
         <meta name="description" content="A full case study blog by Venkat Sai Charan on building his personal portfolio using React, Tailwind, Vite, and Framer Motion." />
       </Helmet>
-      <div className="relative bg-white min-h-screen w-full px-2 md:px-8 py-10 pt-24 text-gray-900 prose lg:prose-xl prose-a:text-[--main-color] prose-a:no-underline hover:prose-a:underline prose-headings:!text-gray-900 prose-strong:text-[--main-color]">
+      <div className="relative bg-white min-h-screen w-full px-2 md:px-8 py-10 pt-20 text-gray-900 prose lg:prose-xl prose-a:text-[--main-color] prose-a:no-underline hover:prose-a:underline prose-headings:!text-gray-900 prose-strong:text-[--main-color]">
         <div className="flex flex-row gap-8 lg:pr-72">
           {/* Mobile TOC */}
           <div className="lg:hidden mb-6">
@@ -148,37 +151,7 @@ const Blog = () => {
           </div>
           {/* Blog Content */}
           <main className="flex-1 min-w-0">
-            {/* Mobile TOC */}
-            <div className="lg:hidden mb-6">
-              <button
-                className="w-full flex items-center justify-between bg-white/90 border border-gray-200 rounded-xl px-4 py-3 text-base font-semibold text-[--main-color] focus:outline-none shadow"
-                onClick={() => setTocOpen(!tocOpen)}
-                aria-label="Toggle Table of Contents"
-              >
-                Table of Contents
-                <span>{tocOpen ? '▲' : '▼'}</span>
-              </button>
-              {tocOpen && (
-                <ul className="bg-white/95 border border-gray-200 rounded-b-xl shadow p-4 space-y-1 mt-1">
-                  {tocItems.map(item => (
-                    <li key={item.id}>
-                      <a
-                        href={`#${item.id}`}
-                        className={`block px-3 py-2 rounded-md transition-colors text-sm font-medium
-                          ${activeId === item.id
-                            ? 'bg-[--main-color]/10 text-[--main-color] font-bold border-l-4 border-[--main-color]'
-                            : 'text-gray-700 hover:bg-gray-100 hover:text-[--main-color]'}
-                        `}
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
             {/* Blog Content */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-0 !text-gray-900">The Code Behind the Canvas: How I Engineered My Personal Brand with React, Tailwind & Analytics</h1>
             <div className="mb-4 flex items-center gap-2 text-[--main-color] text-base font-medium">
               <span role="img" aria-label="timer">⏱️</span> {readingTime} min read
             </div>
@@ -220,7 +193,7 @@ const Blog = () => {
                 <li>Build a site that loads fast, looks sharp, and tells my story</li>
                 <li>Impress recruiters, educate peers, and inspire new developers</li>
                 <li>Use modern tools I actually love working with: React, Tailwind CSS, Vite, Framer Motion, and more</li>
-              </ul>
+            </ul>
               <Divider />
               <SubTitle>🧩 How It's Different from a LinkedIn or GitHub</SubTitle>
               <Table
@@ -255,9 +228,9 @@ const Blog = () => {
                 <li>How analytics shaped my design decisions</li>
                 <li>What worked, what failed, and what actually got recruiter replies</li>
                 <li>Real screenshots of performance reports, SEO gains, and project showcase design</li>
-              </ul>
+            </ul>
               <p>This is my blueprint—you're free to use it as inspiration, a checklist, or even a copy-paste starter for your own journey.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -345,11 +318,11 @@ const Blog = () => {
                 <li>Projects.jsx</li>
                 <li>Experience.jsx</li>
                 <li>ContactForm.jsx</li>
-              </ul>
+            </ul>
               <p>This made it easy to add new sections, reorder layout, and optimize independently.</p>
               <Callout>📌 Pro Tip: Keep components isolated and context-aware. Use props for dynamic content.</Callout>
               <p>✅ <strong>Summary:</strong> By selecting the right stack and structuring my app like a product, I created a site that's not just visually stunning, but technically sound.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -437,7 +410,7 @@ const Blog = () => {
               <Callout>🎁 Developer Tip: Motion is UX, Not Just Eye Candy<br/>• Use animations to clarify hierarchy<br/>• Avoid animating too much at once<br/>• Focus on timing, easing, and interaction feedback<br/>• Framer Motion's variants and layout animations are powerful when building component-based systems</Callout>
               <Divider />
               <p>✅ <strong>Summary:</strong> Design is where code meets emotion. By combining clarity-focused UI with buttery-smooth animations, I created a site that's as delightful to use as it is to build.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -497,7 +470,7 @@ const Blog = () => {
               <p>Using Google Analytics, I built a simple visitor funnel:<br/>Landing Page → Project Page → Contact Form → Submission</p>
               <ul>
                 <li>42% dropped at Project → Contact (Contact section too far down)</li>
-              </ul>
+            </ul>
               <p>Solution Implemented: I added CTA buttons under each project card:</p>
               <pre className="bg-gray-100 dark:bg-gray-800 p-2 rounded text-xs overflow-x-auto">
 {`<Button className="mt-4" onClick={() => scrollTo('#contact')}>
@@ -522,7 +495,7 @@ const Blog = () => {
               <Callout>🤖 Pro Tip: Let Data Drive Creative Choices<br/>• Your "favorite section" might not be the user's<br/>• Shorter = better, especially on mobile<br/>• Animate with intent, not just style<br/>• Track everything from the start</Callout>
               <Divider />
               <p>✅ <strong>Summary:</strong> Your portfolio isn't a static product. It evolves—based on how real users engage with it. By installing basic analytics, I discovered where users were struggling and turned friction into flow.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -579,7 +552,7 @@ const Blog = () => {
                 <li>Hosted fonts locally</li>
                 <li>Used WebP image format where possible</li>
                 <li>Vite + Vercel = Sub-1s load times globally 🌎</li>
-              </ul>
+            </ul>
               <Divider />
               <SubTitle>🧪 Lighthouse SEO + Performance Report</SubTitle>
               <p>📷 <strong>Visual Suggestion:</strong> Lighthouse audit report with 90+ scores in SEO, Performance, Accessibility, Best Practices</p>
@@ -612,7 +585,7 @@ const Blog = () => {
               </pre>
               <Divider />
               <p>✅ <strong>Summary:</strong> SEO isn't about gaming the system—it's about building for clarity, speed, and intent. By applying structured content, semantic markup, and laser-focused performance improvements, I created a portfolio that search engines love—and users enjoy.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -704,11 +677,11 @@ const Blog = () => {
                 <li>People scan vertically. CTAs are placed just as momentum slows.</li>
                 <li>Action words convert better. "Let's Talk &gt; 'Submit'"</li>
                 <li>Social proof builds trust. Linking GitHub & LinkedIn under form improved engagement.</li>
-              </ul>
+            </ul>
               <Divider />
               <p>✅ <strong>Summary:</strong> Traffic means nothing if it doesn't lead to opportunity. By applying marketing psychology, conversion optimization, and clear CTA logic, I turned my portfolio into a lead-generating, connection-building machine.</p>
               <p>💼 Since launch, I've received job leads, freelance requests, and community invites—all via the contact form.</p>
-            </motion.section>
+          </motion.section>
             <motion.section
               variants={fadeSlideIn}
               initial="hidden"
@@ -787,7 +760,7 @@ const Blog = () => {
                 <li>A friend who's job hunting</li>
                 <li>A student learning web dev</li>
                 <li>Your LinkedIn network</li>
-              </ul>
+            </ul>
               <p>✨ Let's raise the bar for developer portfolios—together.</p>
               <Divider />
               <SubTitle>✅ The End (Or the Beginning…)</SubTitle>
@@ -797,7 +770,7 @@ const Blog = () => {
               <Divider />
               <p>🖼️ <strong>Visual Suggestion:</strong> A clean "Thank You" screen with a subtle animation or waving hand emoji.<br/>"Thanks for reading. Now go build yours."</p>
               <Divider />
-            </motion.section>
+          </motion.section>
           </main>
           {/* Sidebar TOC (Desktop, Fixed, Right) */}
           <motion.aside
