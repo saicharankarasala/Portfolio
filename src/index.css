@@ -72,7 +72,8 @@
 
   /* Text selection */
   ::selection {
-    @apply bg-white/20 text-white;
+    background: #00ffee;
+    color: #111;
   }
 
   /* Focus styles */
