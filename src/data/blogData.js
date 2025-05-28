@@ -2,7 +2,7 @@ export const blogPosts = [
   {
     slug: "portfolio-case-study",
     title: "The Code Behind the Canvas: How I Engineered My Personal Portfolio with React, Tailwind & Analytics",
-    date: "2024-06-10",
+    date: "05-10-2025",
     category: "Case Study",
     excerpt: "A full case study on building my personal portfolio using React, Tailwind, Vite, and Framer Motion.",
     image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
