@@ -366,11 +366,9 @@ const App = () => {
                       <p className="text-[--main-color] mb-2">January 2025 – Present</p>
                       <h4 className="text-lg text-[--main-color]">Source Consulting LLC – Remote (<a href="https://touchwindow.com" target="_blank" rel="noopener noreferrer">Client: Touch Screens Inc - touchwindow.com</a>)</h4>
                       <ul className="list-disc pl-5 mt-4 text-white/80">
-                        <li>Enhanced network performance and reliability by monitoring and analyzing metrics using AWS, Python, and SQL.</li>
-                        <li>Reduced response times by 30% via automated Python scripts for performance analysis and incident reporting.</li>
-                        <li>Leveraged Tableau and SQL to visualize network trends and areas for improvement.</li>
-                        <li>Implemented network upgrades and collaborated across teams using Linux, Bash scripting, and cloud tools.</li>
-                        <li>Improved communication and technical issue resolution among engineering and support teams.</li>
+                        <li>Automated pricing for 100K+ SKUs using Python, Pandas, AWS Lambda, Google Sheets API</li>
+                        <li>Built ETL pipelines with Hadoop, Snowflake, Pentaho, improving vendor data sync</li>
+                        <li>Visualized KPIs with Tableau, Power BI; implemented REST & Bash scripts for backups</li>
                       </ul>
                     </div>
                   </div>
@@ -382,11 +380,8 @@ const App = () => {
                       <p className="text-[--main-color] mb-2">April 2024 – December 2024</p>
                       <h4 className="text-lg text-[--main-color]">Trbhi INC – Remote (<a href="https://ziplyfiber.com" target="_blank" rel="noopener noreferrer">Client: Ziply Fiber Technology - ziplyfiber.com</a>)</h4>
                       <ul className="list-disc pl-5 mt-4 text-white/80">
-                        <li>Reduced network downtime by 20% through SQL and Python-based analysis.</li>
-                        <li>Boosted client satisfaction by 15% with effective incident response coordination.</li>
-                        <li>Built Tableau and Google Analytics reports for data-driven decision-making.</li>
-                        <li>Used Snowflake for trend identification and optimization in mobile/web services.</li>
-                      </ul>
+                        <li>Reduced MTTR by 40% with Python/Bash automation & Dynatrace-based monitoring</li>
+                        <li>Debugged D365 and APIs using PowerShell, SQL Server, and ServiceNow RCA flows</li>
                     </div>
                   </div>
 
@@ -397,10 +392,9 @@ const App = () => {
                       <p className="text-[--main-color] mb-2">May 2023 – December 2023</p>
                       <h4 className="text-lg text-[--main-color]">University of Missouri - Kansas City – Kansas City, MO, USA</h4>
                       <ul className="list-disc pl-5 mt-4 text-white/80">
-                        <li>Improved lab functionality by 30% through technical support and systems improvements.</li>
-                        <li>Boosted lab resource availability by 25% with effective equipment and software management.</li>
+                        <li>Managed 150+ lab systems with PXE, GPO, Linux/Windows Dual Boot</li>
+                        <li>Automated diagnostics using Python & Bash, cutting support tickets by 35%</li>
                         <li>Raised student support satisfaction by 40% via one-on-one support and feedback tracking.</li>
-                        <li>Increased lab efficiency by 35% with detailed troubleshooting and maintenance.</li>
                       </ul>
                     </div>
                   </div>
@@ -412,8 +406,8 @@ const App = () => {
                       <p className="text-[--main-color] mb-2">September 2021 – July 2022</p>
                       <h4 className="text-lg text-[--main-color]">Wipro Technologies – Bengaluru, KA, India</h4>
                       <ul className="list-disc pl-5 mt-4 text-white/80">
-                        <li>Enhanced data integration by 30% with Informatica PowerCenter configuration.</li>
-                        <li>Automated workflows to reduce processing time by 25%.</li>
+                        <li>Built ETL pipelines using Informatica, PL/SQL, Unix Shell, and CI via GitLab</li>
+                        <li>Automated reporting flows with Python, Excel Macros, improving ETL transparency</li>
                         <li>Managed metadata and repositories to streamline project execution.</li>
                         <li>Supported cross-functional teams with technical insights using SQL and Python.</li>
                       </ul>
@@ -427,11 +421,9 @@ const App = () => {
                       <p className="text-[--main-color] mb-2">May 2019 – August 2021</p>
                       <h4 className="text-lg text-[--main-color]">Merizon Technologies LLC – Remote</h4>
                       <ul className="list-disc pl-5 mt-4 text-white/80">
-                        <li>Developed and maintained web apps with C#/.NET, Java, and MySQL, boosting performance by 20%.</li>
-                        <li>Automated data processing tasks to cut manual effort by 30%.</li>
+                        <li>Developed full-stack apps with Java, Spring Boot, MySQL, JS</li>
+                        <li>Implemented CI using GitHub Actions, improved test coverage via JUnit & Selenium</li>
                         <li>Improved API performance by 25% through SQL query optimization.</li>
-                        <li>Collaborated in Agile teams using Git, code reviews, and debugging.</li>
-                        <li>Balanced project work with academic responsibilities, enhancing collaboration and problem-solving skills.</li>
                       </ul>
                     </div>
                   </div>
