@@ -382,6 +382,7 @@ const App = () => {
                       <ul className="list-disc pl-5 mt-4 text-white/80">
                         <li>Reduced MTTR by 40% with Python/Bash automation & Dynatrace-based monitoring</li>
                         <li>Debugged D365 and APIs using PowerShell, SQL Server, and ServiceNow RCA flows</li>
+                      </ul>
                     </div>
                   </div>
 
