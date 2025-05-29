@@ -26,7 +26,7 @@ Here's a glimpse of what the portfolio looks like:
 
 ---
 
-## 🆕 Recent Updates & Improvements (May/June 2024)
+## 🆕 Recent Updates & Improvements (May 2025)
 
 - **Deployment & Build Fixes:**
   - Fixed Vite `base` path and removed problematic custom asset headers from `vercel.json` to ensure correct static asset serving on Vercel.
@@ -212,24 +212,90 @@ The project follows a standard structure for a Vite-based React application:
 .
 ├── public/                 # Static assets (images, certifications, favicon)
 │   ├── images/
+│   │   ├── Navlogo.png
+│   │   ├── python.png
+│   │   ├── aws.png
+│   │   ├── Thumbnail.jpg
+│   │   ├── about.jpg
+│   │   ├── profile.JPG
+│   │   └── vsc-logo.png
 │   └── certifications/
-├── assets/                 # Additional assets (e.g., images used in README)
-│   └── images/
+│       └── edureka-python.pdf
+├── assets/                 # Additional assets (e.g., images, icons)
+│   ├── images/
+│   │   ├── Thumbnail.jpg
+│   │   ├── ProCodrr.webp
+│   │   ├── Srihari.webp
+│   │   ├── coder.svg
+│   │   ├── contact-me.svg
+│   │   ├── eazygrad.webp
+│   │   ├── expense-tracker.webp
+│   │   ├── harigurus.webp
+│   │   ├── kira.webp
+│   │   ├── money-arjan.webp
+│   │   ├── name-logo-black.svg
+│   │   ├── name-logo-favicon.svg
+│   │   ├── name-logo-white.svg
+│   │   ├── name-logo.svg
+│   │   ├── pioneer-digital.webp
+│   │   ├── profile.JPG
+│   │   ├── saatvik.webp
+│   │   └── web-dev-english.webp
+│   └── icons/
+│       ├── at-symbol.svg
+│       ├── chat.svg
+│       ├── email.svg
+│       ├── express.svg
+│       ├── external-link.svg
+│       ├── github.svg
+│       ├── instagram.svg
+│       ├── linkedin.svg
+│       ├── mongodb.svg
+│       ├── moon.svg
+│       ├── name-logo.svg
+│       ├── node.svg
+│       ├── phone.svg
+│       ├── react.svg
+│       ├── sun.svg
+│       ├── telegram.svg
+│       ├── twitter-x.svg
+│       ├── twitter.svg
+│       ├── user.svg
+│       ├── whatsapp.svg
+│       └── x.svg
 ├── src/                    # Source code
 │   ├── components/         # Reusable React components
-│   │   ├── BackgroundLogo.jsx # Background visual element
-│   │   ├── Contact.jsx        # Contact form component
-│   │   ├── HamburgerMenu.jsx  # Mobile navigation menu
-│   │   └── VscLogo.jsx        # VSC logo component
+│   │   ├── BackgroundLogo.jsx
+│   │   ├── Blog.jsx
+│   │   ├── BlogCard.jsx
+│   │   ├── BlogNavbar.jsx
+│   │   ├── Contact.jsx
+│   │   ├── HamburgerMenu.jsx
+│   │   ├── ParallaxBackground.jsx
+│   │   └── VscLogo.jsx
+│   ├── data/               # Data files
+│   │   └── blogData.js
+│   ├── pages/              # Page-level components
+│   │   ├── BlogLanding.jsx
+│   │   └── BlogPost.jsx
 │   ├── App.jsx             # Main application component
 │   ├── index.css           # Global styles and Tailwind directives
-│   └── main.jsx            # Entry point for the React application
+│   ├── main.jsx            # Entry point for the React application
+│   └── output.css          # Generated CSS (if any)
 ├── tailwind.config.js      # Tailwind CSS configuration
 ├── vite.config.js          # Vite build configuration
 ├── package.json            # Project dependencies and scripts
 ├── package-lock.json       # Locked dependency versions
 ├── README.md               # This file
-└── LICENSE                 # Project license information
+├── LICENSE                 # Project license information
+├── input.css               # Additional CSS input file
+├── font.css                # Font CSS
+├── style.css               # Additional styles
+├── matter.js               # Additional JS utility
+├── postcss.config.js       # PostCSS configuration
+├── .gitignore              # Git ignore file
+├── .DS_Store               # macOS system file
+└── vercel.json             # Vercel deployment configuration
 ```
 
 ---
