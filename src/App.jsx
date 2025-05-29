@@ -153,6 +153,9 @@ const App = () => {
                     <a href="mailto:saicharankarasala@gmail.com" target="_blank" rel="noopener noreferrer">
                       <i className='bx bx-envelope'></i>
                     </a>
+                    <a href="https://github.com/KVSC1511" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                      <FaGithub className="text-3xl" />
+                    </a>
                   </div>
 
                   <div className="btn-group">
@@ -583,6 +586,9 @@ const App = () => {
                     </a>
                     <a href="mailto:saicharankarasala@gmail.com" target="_blank" rel="noopener noreferrer">
                       <i className='bx bx-envelope'></i>
+                    </a>
+                    <a href="https://github.com/KVSC1511" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                      <FaGithub className="text-2xl" />
                     </a>
                   </div>
                   
