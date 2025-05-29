@@ -14,7 +14,16 @@ const BlogLanding = () => {
   return (
     <div className="bg-white min-h-screen text-gray-900 font-sans">
       {/* Hero Section */}
-      <div className="w-full min-h-[380px] flex flex-col items-center justify-center bg-gradient-to-tr from-[#2d014d] via-[#6d217f] to-[#e13a7a] text-white text-center px-4">
+      <div className="w-full min-h-[380px] flex flex-col items-center justify-center bg-gradient-to-tr from-[#2d014d] via-[#6d217f] to-[#e13a7a] text-white text-center px-4 relative">
+        <div className="absolute left-4 top-6 w-auto flex justify-start">
+          <a
+            href="/"
+            className="inline-flex items-center text-white/80 hover:text-white text-base font-medium px-3 py-1 rounded transition underline underline-offset-2"
+            style={{ background: "transparent" }}
+          >
+            ← Back to Portfolio
+          </a>
+        </div>
         <h1 className="text-5xl md:text-6xl font-bold mb-4">Welcome to the <span className="text-white">SAI CHARAN'S Blog</span></h1>
         <p className="text-xl md:text-2xl font-normal text-white/80 mb-8">Join us on my Journey of Web Development</p>
         <div className="max-w-xl w-full mx-auto flex items-center mt-2">
