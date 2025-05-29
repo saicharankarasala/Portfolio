@@ -159,7 +159,7 @@ const App = () => {
                   </div>
 
                   <div className="btn-group">
-                    <a href="#" className="btn">Download CV</a>
+                    <a href="/cv.pdf" className="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
                     <a href="#contact" className="btn">Contact Me</a>
                   </div>
                 </div>
