@@ -26,6 +26,25 @@ Here's a glimpse of what the portfolio looks like:
 
 ---
 
+## 🆕 Recent Updates & Improvements (May/June 2024)
+
+- **Deployment & Build Fixes:**
+  - Fixed Vite `base` path and removed problematic custom asset headers from `vercel.json` to ensure correct static asset serving on Vercel.
+  - Resolved issues where the blog page was blank after deployment due to MIME type errors and Vercel routing.
+- **Blog Page Professionalization:**
+  - Added a sticky, left-aligned Table of Contents (TOC) sidebar for the blog, improving navigation and professionalism.
+  - Each major blog section now has anchor links, making them directly accessible from the TOC.
+  - Improved TOC/sidebar appearance, alignment, and responsiveness for all devices.
+- **Styling & UX:**
+  - Fixed global CSS that was overriding heading colors on the blog.
+  - General improvements to the look and feel of the blog page.
+- **Structure Clarification:**
+  - The blog is a single-page app with 7 major sections, each styled as a "Page" and accessible via the TOC.
+- **Troubleshooting & Debugging:**
+  - Documented steps for debugging blank pages, MIME type errors, and Vercel static asset/routing issues.
+
+---
+
 ## ✨ Key Features
 
 This portfolio website is packed with features designed to present information clearly and engagingly:
@@ -38,6 +57,7 @@ This portfolio website is packed with features designed to present information c
     *   🏅 **Certifications Showcase**: Highlighted professional certifications with verification links, also presented in a card format.
     *   💼 **Experience**: Detailed information about my professional roles, responsibilities, and key accomplishments, presented in an easy-to-read card format.
     *   🏆 **Projects**: Interactive project cards showcasing various personal and professional projects, complete with descriptions, tech stacks used, and relevant links.
+    *   📝 **Blog**: A single-page blog with a professional, sticky Table of Contents (TOC) sidebar, anchor links for each section, and improved navigation and styling.
 *   **Interactive Contact Form**: A functional contact form powered by EmailJS, allowing visitors to send messages directly. Includes a fun confetti animation on successful submission!
 *   **Integrated Social Links**: Easy access to my professional social media profiles (LinkedIn, Email) for networking and contact.
 *   **Animations & Transitions**: Smooth and modern animations implemented using AOS (Animate On Scroll) and Framer Motion to enhance the user experience and visual appeal.
@@ -179,6 +199,8 @@ Personalizing this portfolio template is straightforward. Here's how you can mak
 *   **Customize Tailwind Styles**:
     *   Tailwind CSS is used for all styling. You can customize the theme (colors, fonts, spacing, etc.) by editing `tailwind.config.js`.
     *   Modify existing utility classes in your JSX files (`.text-xl`, `.mb-4`, etc.) or add new custom CSS in `src/index.css` using Tailwind's `@apply` directive if needed.
+*   **Edit Blog Sections & TOC:**
+    *   To add or update blog sections, edit the relevant components in `src/` and update the TOC/sidebar for new anchor links.
 
 ---
 
