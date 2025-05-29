@@ -24,6 +24,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Blog from './components/Blog';
 import BlogLanding from "./pages/BlogLanding";
 import BlogPost from "./pages/BlogPost";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,7 +58,10 @@ const App = () => {
         if(top >= offset && top < offset + height) {
           navLinks.forEach(link => {
             link.classList.remove('active');
-            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            const navLink = document.querySelector('header nav a[href*=' + id + ']');
+            if (navLink) {
+              navLink.classList.add('active');
+            }
           });
         }
       });
@@ -598,6 +602,7 @@ const App = () => {
           } />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </HelmetProvider>
   );
 };
