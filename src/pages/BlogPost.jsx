@@ -95,33 +95,23 @@ const BlogPost = () => {
   // Update the site architecture diagram content
   if (post.slug === 'site-architecture') {
     post.content = `
-      <div class="mermaid">
+      <div class="mermaid" style="max-width:1000px;margin:auto;background:#fff;padding:32px 24px;border-radius:24px;box-shadow:0 4px 32px 0 rgba(0,0,0,0.08);font-size:1.25rem;">
         graph TD
-          A[App.jsx] --> B[Header/Navbar]
-          A --> C[Main Sections]
-          A --> D[Footer]
-          
-          C --> E[About]
-          C --> F[Skills]
-          C --> G[Education]
-          C --> H[Certifications]
-          C --> I[Experience]
-          C --> J[Projects]
-          C --> K[Contact]
-          C --> L[Blog]
-          
+          A[App.jsx] --> B[Navbar]
+          A --> C[Routes]
+          A --> D[ThemeProvider]
+          B --> E[Home.jsx]
+          C --> F[Projects.jsx]
+          D --> G[Contact.jsx]
           style A fill:#f9f,stroke:#333,stroke-width:4px
-          style B fill:#bbf,stroke:#333,stroke-width:2px
-          style C fill:#bbf,stroke:#333,stroke-width:2px
-          style D fill:#bbf,stroke:#333,stroke-width:2px
-          style E fill:#ddf,stroke:#333,stroke-width:2px
-          style F fill:#ddf,stroke:#333,stroke-width:2px
-          style G fill:#ddf,stroke:#333,stroke-width:2px
-          style H fill:#ddf,stroke:#333,stroke-width:2px
-          style I fill:#ddf,stroke:#333,stroke-width:2px
-          style J fill:#ddf,stroke:#333,stroke-width:2px
-          style K fill:#ddf,stroke:#333,stroke-width:2px
-          style L fill:#ddf,stroke:#333,stroke-width:2px
+          style B fill:#e0e7ff,stroke:#6366f1,stroke-width:2px
+          style C fill:#e0e7ff,stroke:#6366f1,stroke-width:2px
+          style D fill:#e0e7ff,stroke:#6366f1,stroke-width:2px
+          style E fill:#f1f5f9,stroke:#6366f1,stroke-width:2px
+          style F fill:#f1f5f9,stroke:#6366f1,stroke-width:2px
+          style G fill:#f1f5f9,stroke:#6366f1,stroke-width:2px
+        %% Custom font size for all nodes
+        classDef default font-size:22px,font-family:Inter,sans-serif;
       </div>
     `;
   }
