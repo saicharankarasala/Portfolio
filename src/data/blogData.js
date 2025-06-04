@@ -15,7 +15,7 @@ export const blogPosts = [
     lastUpdated: "05-10-2025",
     content: `
 <article class="prose lg:prose-xl max-w-none mx-auto p-6">
-  <h1 class="mb-10 text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">🚀 Building My Portfolio with React & Tailwind: A Developer's Journey</h1>
+  <h2 class="mb-6 text-3xl font-extrabold tracking-wide text-gray-900">🚀 Building My Portfolio with React & Tailwind: A Developer's Journey</h2>
   <section class="mb-14 p-8 bg-white/90 rounded-2xl shadow-lg border border-gray-100">
     <p class="mb-4">In today's digital-first world, your portfolio is your handshake. It's not just about listing skills — it's about proving them. When I set out to build <a href="https://www.venkatasaicharan.com" target="_blank">venkatasaicharan.com</a>, my goal was clear: to create a portfolio that reflects who I am as a software engineer — clean, fast, interactive, and thoughtfully engineered.</p>
     <p>This blog shares how I built my portfolio from the ground up using <strong>React</strong>, <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>Framer Motion</strong> — and the key decisions, tools, and techniques that brought it all together.</p>
@@ -39,22 +39,30 @@ export const blogPosts = [
     <h3 class="mb-4 text-xl font-semibold text-gray-900 border-l-2 border-cyan-300 pl-3 bg-cyan-50/60 rounded shadow">Site Architecture</h3>
     <pre class="mermaid mb-6">
 graph TD
-  A[App.jsx] --> B[Navbar]
-  A --> C[Routes]
-  C --> D[Home.jsx]
-  C --> E[Projects.jsx]
-  C --> F[Contact.jsx]
-  A --> G[ThemeProvider]
+  A[App.jsx] --> B[Header/Navbar]
+  A --> C[Main Sections]
+  A --> D[Footer]
+  C --> E[About]
+  C --> F[Skills]
+  C --> G[Education]
+  C --> H[Certifications]
+  C --> I[Experience]
+  C --> J[Projects]
+  C --> K[Contact]
+  C --> L[Blog]
 </pre>
   </section>
   <section class="mb-14 p-8 bg-white/90 rounded-2xl shadow-lg border border-gray-100">
     <h2 class="mb-6 text-3xl font-extrabold tracking-wide text-gray-900 border-l-4 border-cyan-400 pl-4 bg-white/80 rounded shadow-sm">📂 Project Sections Built with Purpose</h2>
     <ul class="list-disc pl-6 space-y-2">
       <li><strong>About Me</strong>: Snapshot of my journey and personality.</li>
+      <li><strong>Skills</strong>: My technical proficiencies and tools I use.</li>
+      <li><strong>Education</strong>: Academic background and degrees.</li>
+      <li><strong>Certifications</strong>: Proof of my commitment to continuous learning.</li>
+      <li><strong>Experience</strong>: Professional roles and impactful work.</li>
       <li><strong>Projects</strong>: Real-world applications showcasing both frontend and backend skills.</li>
-      <li><strong>Experience & Education</strong>: Timeline format for clarity and context.</li>
-      <li><strong>Certifications</strong>: Proving my commitment to continuous learning.</li>
-      <li><strong>Contact</strong>: Conversion-optimized and functional.</li>
+      <li><strong>Contact</strong>: Conversion-optimized and functional way to reach me.</li>
+      <li><strong>Blog</strong>: In-depth case studies, technical write-ups, and personal insights.</li>
     </ul>
   </section>
   <section class="mb-14 p-8 bg-white/90 rounded-2xl shadow-lg border border-gray-100">
@@ -110,16 +118,17 @@ graph TD
   </section>
   <section class="mb-14 p-8 bg-white/90 rounded-2xl shadow-lg border border-gray-100">
     <h2 class="mb-6 text-3xl font-extrabold tracking-wide text-gray-900 border-l-4 border-cyan-400 pl-4 bg-white/80 rounded shadow-sm">🙌 Want to Build Your Own?</h2>
-    <p class="mb-4">If you're a developer starting out:</p>
+    <p class="mb-4">Ready to launch your own portfolio? Here's my advice for developers starting out:</p>
     <ul class="list-disc pl-6 space-y-2">
       <li>Start small and build iteratively.</li>
       <li>Choose tools you enjoy using and want to master.</li>
-      <li>Don't just list features — explain decisions.</li>
+      <li>Don't just list features — explain your decisions and process.</li>
     </ul>
-    <blockquote class="border-l-4 border-cyan-400 bg-cyan-50/60 italic text-lg p-4 rounded-lg my-6">
-      You can find the source code here: 
-      <a href="https://github.com/KVSC1511/My-Personal-Portfolio.git" target="_blank">GitHub – My Personal Portfolio</a>
-    </blockquote>
+    <div class="flex justify-center mt-8">
+      <a href="https://github.com/KVSC1511/MyPortfolio" target="_blank" class="inline-block bg-[#e13a7a] text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-[#6d217f] transition-all text-lg">
+        🚀 View Source Code on GitHub
+      </a>
+    </div>
   </section>
 </article>
     `
