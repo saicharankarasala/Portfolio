@@ -119,7 +119,7 @@ const Blog = () => {
         <meta name="description" content="A full case study blog by Venkat Sai Charan on building his personal portfolio using React, Tailwind, Vite, and Framer Motion." />
       </Helmet>
       <div className="relative bg-white min-h-screen w-full px-2 md:px-8 py-10 pt-20 text-gray-900 prose lg:prose-xl prose-a:text-[--main-color] prose-a:no-underline hover:prose-a:underline prose-headings:!text-gray-900 prose-strong:text-[--main-color]">
-        <div className="flex flex-row gap-8 lg:pr-72">
+        <div className="flex flex-row gap-8 lg:pr-80">
           {/* Mobile TOC */}
           <div className="lg:hidden mb-6">
             <button
@@ -772,16 +772,15 @@ const Blog = () => {
               <Divider />
           </motion.section>
           </main>
-          {/* Sidebar TOC (Desktop, Fixed, Right) */}
+          {/* Sidebar TOC (Desktop, Sticky, Right) */}
           <motion.aside
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="hidden lg:block w-64 flex-shrink-0"
             style={{
-              position: 'fixed',
+              position: 'sticky',
               top: '6rem',
-              right: '3rem',
               zIndex: 30,
               maxHeight: '80vh',
               overflowY: 'auto'
